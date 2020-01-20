@@ -15,11 +15,11 @@ public class Main {
         //入力データを受け取る
         Scanner sc = new Scanner(System.in);
         sc.useDelimiter(" |\\s");
-		//ビンゴの縦および横の長さ(問題文のNに相当)
+        //ビンゴの縦および横の長さ(問題文のNに相当)
         int length = Integer.parseInt(sc.next());
-		//読み上げ回数(問題文のMに相当)
+        //読み上げ回数(問題文のMに相当)
         int call = Integer.parseInt(sc.next());
-		//ビンゴカード
+        //ビンゴカード
         int[][] card = new int[length][length];
         //カードに値を設定
         for(int i = 0; i < length; i++){
@@ -98,7 +98,7 @@ public class Main {
             if(maxNum == 0){
               bingo++;
 			}
-			//ビンゴが最大数かどうかチェックする
+            //ビンゴが最大数かどうかチェックする
             if(maxBingo < bingo){
               maxBingo = bingo;
             }
