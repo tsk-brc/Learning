@@ -10,13 +10,13 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         
-		//入力データを受け取る
+        //入力データを受け取る
         Scanner sc = new Scanner(System.in);
         int num = Integer.parseInt(sc.nextLine());
-		//入力データ分処理
+        //入力データ分処理
         for(int i = 0; i < num; i++){
           String str = sc.nextLine();
-		  //文字列チェック
+          //文字列チェック
           if(str.substring(str.length()- 1, str.length()).equals("s") || 
             str.substring(str.length() - 1,str.length()).equals("o") || 
             str.substring(str.length()- 1, str.length()).equals("x") || 
