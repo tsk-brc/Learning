@@ -5,7 +5,7 @@ import java.util.*;
   ・はじめは、すべての有権者はどの立候補者も支持していない。
   ・立候補者が演説をし、演説が終わるたびに、
     「他のそれぞれの立候補者の支持者から1人ずつ」および
-	「誰も支持していない有権者から1人」が演説をした人を支持するようになる。
+    「誰も支持していない有権者から1人」が演説をした人を支持するようになる。
 */
 public class Main {
     public static void main(String[] args) {
@@ -19,7 +19,7 @@ public class Main {
         int[] person = new int[rikkouhosha + 1];
         int maxPerson = 0;
         ArrayList<Integer> output = new ArrayList<Integer>();
-		//立候補者が演説を行う
+        //立候補者が演説を行う
         for(int i = 0; i < enzetsu; i++){
           int target = Integer.parseInt(sc.next());
           //誰も支持していない有権者がいたら1人追加
@@ -44,7 +44,7 @@ public class Main {
             output.add(k);
           }
         }
-		//最多の支持をされた有権者を出力する(最多が同数の場合は複数人出力する)
+        //最多の支持をされた有権者を出力する(最多が同数の場合は複数人出力する)
         for(int l = 0; l < output.size(); l++){
           System.out.println(output.get(l));    
         }
