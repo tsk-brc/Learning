@@ -13,24 +13,24 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
 
-        //入力データを受け取る
-        Scanner sc = new Scanner(System.in);
-        sc.useDelimiter(" |\\s");
-		//縦の長さ
-        int tate = Integer.parseInt(sc.next());
-		//横の長さ
-		int yoko = Integer.parseInt(sc.next());
-        //現在地(縦方向)
-		int nowTate = Integer.parseInt(sc.next());
-        //現在地(横方向)
-		int nowYoko = Integer.parseInt(sc.next());
-		//移動方向(N,E,W,Sのいずれか。初期値はN)
-        String hougaku = "N";
-		//町の状態
-        String[][] map = new String[tate][yoko];
-		//初期の町状態を二次元配列にセットする
-        for(int i = 0; i < tate; i++){
-          String str = sc.next();
+      //入力データを受け取る
+      Scanner sc = new Scanner(System.in);
+      sc.useDelimiter(" |\\s");
+      //縦の長さ
+      int tate = Integer.parseInt(sc.next());
+      //横の長さ
+      int yoko = Integer.parseInt(sc.next());
+      //現在地(縦方向)
+      int nowTate = Integer.parseInt(sc.next());
+      //現在地(横方向)
+      int nowYoko = Integer.parseInt(sc.next());
+      //移動方向(N,E,W,Sのいずれか。初期値はN)
+      String hougaku = "N";
+      //町の状態
+      String[][] map = new String[tate][yoko];
+      //初期の町状態を二次元配列にセットする
+      for(int i = 0; i < tate; i++){
+        String str = sc.next();
           for(int j = 0; j < yoko; j++){
             map[i][j] = str.substring(j, j + 1);
           }
@@ -69,7 +69,7 @@ public class Main {
             }
           }
         }
-		//最終的な町状態を出力する
+        //最終的な町状態を出力する
         for(int x = 0; x < tate; x++){
           StringBuilder sb = new StringBuilder();
           for(int y = 0; y < yoko; y++){
