@@ -13,19 +13,19 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         sc.useDelimiter(" |\\s");
         //工事現場のx座標
-		int x = Integer.parseInt(sc.next());
+　　　　　int x = Integer.parseInt(sc.next());
         //工事現場のy座標
-		int y = Integer.parseInt(sc.next());
+　　　　　int y = Integer.parseInt(sc.next());
         //工事現場の騒音が届く半径
-		int r = Integer.parseInt(sc.next());
-		//木の数
+　　　　　int r = Integer.parseInt(sc.next());
+　　　　　//木の数
         int tree = Integer.parseInt(sc.next());
         for(int i = 0; i < tree; i++){
-		  //木のx座標
+　　　　　　//木のx座標
           int targetX = Integer.parseInt(sc.next());
           //木のy座標
-		  int targetY = Integer.parseInt(sc.next());
-		  //工事現場の騒音が届くかどうかを判定
+　　　　　　int targetY = Integer.parseInt(sc.next());
+　　　　　　//工事現場の騒音が届くかどうかを判定
           if((targetX - x) * (targetX - x) + (targetY - y) * (targetY - y) >= r * r){
             System.out.println("silent");
           } else {
