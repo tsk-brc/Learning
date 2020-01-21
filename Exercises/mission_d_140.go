@@ -29,13 +29,15 @@ func main(){
 
     //入力データを受け取る
     a := nextInt()
-	s := []string{}
-	//入力データを配列に格納
+    //入力データを格納する配列
+    s := []string{}
+	
+    //入力データを配列に格納
     for i := 0; i < 10; i++{
         sc.Scan()
         s = append(s, sc.Text())
     }
-
-	//値を出力
+	
+    //値を出力
     fmt.Println(s[a - 1])
 }
