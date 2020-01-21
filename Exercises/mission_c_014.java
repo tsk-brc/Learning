@@ -10,19 +10,19 @@ public class Main {
         //入力データを受け取る
         Scanner sc = new Scanner(System.in);
         sc.useDelimiter(" |\\s");
-		//箱の数
+        //箱の数
         int box = Integer.parseInt(sc.next());
         //ボールの半径
-		int r = Integer.parseInt(sc.next());
+        int r = Integer.parseInt(sc.next());
         for(int i = 0; i < box; i++){
-		  //箱の高さ
+          //箱の高さ
           int height = Integer.parseInt(sc.next());
-		  //箱の幅
+          //箱の幅
           int weight = Integer.parseInt(sc.next());
-		  //箱の奥行き
+          //箱の奥行き
           int distance = Integer.parseInt(sc.next());
           //箱にボールが入るかどうかをチェックする
-		  if(height >= r * 2 && weight >= r * 2 && distance >= r * 2){
+          if(height >= r * 2 && weight >= r * 2 && distance >= r * 2){
             System.out.println(i + 1);
           }
         }
