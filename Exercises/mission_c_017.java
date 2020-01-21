@@ -1,11 +1,13 @@
 import java.util.*;
 
 /*
-  仕入れた量に対して売れ残った量を算出する。
-  生鮮食品をm[kg]仕入れた。
-  最初は生のまま販売したところ、p[%]を売ることができた。
-  次にその売れ残りをすべてお惣菜にして販売したところ、q[%]を売ることができた。
-  最終的に何kg売れ残ったか。
+  カードゲームを行う。なお、ルールは以下の通り。
+  ・カードを2枚配布する。
+  ・1枚目には1から10の整数、2枚目には1から4の整数書かれている。
+  ・2枚のカードの強弱関係は、以下のルールで決める。
+    ・1枚目の番号が大きいカードのほうが強い。
+    ・1枚目の番号が同じ場合、2つ目の番号が小さいカードのほうが強い。
+  なお、2枚の組み合わせが同じになることはない。
 */
 public class Main {
     public static void main(String[] args) {
@@ -13,12 +15,29 @@ public class Main {
         //入力データを受け取る
         Scanner sc = new Scanner(System.in);
         sc.useDelimiter(" |\\s");
-        //生鮮食品の量
-        int num1 = Integer.parseInt(sc.next());
-        //生のまま売れた量
-        int num2 = Integer.parseInt(sc.next());
-        //お惣菜にして売れた量
-        int num3 = Integer.parseInt(sc.next());
-        System.out.println((num1 * (100 - num2) * 0.01) * (100 - num3) * 0.01);
+        //親のカード1枚目
+        int oyaCard1 = Integer.parseInt(sc.next());
+        //親のカード2枚目
+        int oyaCard2 = Integer.parseInt(sc.next());
+        //プレイヤー数
+        int player = Integer.parseInt(sc.next());
+        for(int i = 0; i < player; i++){
+            //子のカード1枚目
+            int koCard1 = Integer.parseInt(sc.next());
+            //子のカード2枚目
+            int koCard2 = Integer.parseInt(sc.next());
+            //結果判定
+            if(oyaCard1 > koCard1){
+               System.out.println("High"); 
+            } else if(oyaCard1 < koCard1){
+               System.out.println("Low");  
+            } else {
+              if(oyaCard2 > koCard2){
+                System.out.println("Low");   
+              } else {
+               System.out.println("High");    
+              }
+            }
+        }
     }
 }
