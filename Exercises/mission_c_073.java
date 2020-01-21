@@ -31,7 +31,7 @@ public class Main {
         }
 
         //かめのかかる時間を算出する
-		int kameTime = kame * length;
+	int kameTime = kame * length;
 
         //どちらが早く着いたかを比較する
         if(usagiTime < kameTime){
