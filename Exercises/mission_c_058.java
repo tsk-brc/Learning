@@ -1,39 +1,51 @@
 import java.util.*;
 
 /*
-  合格した生徒を判定する。生徒の点数は以下のルールで算出する。
-    ・学生の成績はテストの点数から欠席回数×5点を引いた点数とする。
-    ・成績がマイナスとなった場合は0とする。
-  
+  箱の向きを揃えるための回転数を求める。
+  箱の揃える向きは一通りに定められており、この向きに揃える必要がある。
+  ただ、向きを揃えるのに右回りにしか回転させることができない。
+  1側面分の回転を1回として、箱の向きが揃う最小回転数を計算する。
 */
 public class Main {
     public static void main(String[] args) {
 
-        //入力データを受け取る
-        Scanner sc = new Scanner(System.in);
-        sc.useDelimiter(" ,|\\s");
-        //学生の数
-        int person = Integer.parseInt(sc.next());
-        //合格点
-        int passPoint = Integer.parseInt(sc.next());
-        //生徒ごとに合格か否か判定する
-        for (int i = 0; i < person;i++){
-            //生徒の点
-            int score = 0;
-            //テストの点数
-            int point = Integer.parseInt(sc.next());
-            //欠席数
-            int absent = Integer.parseInt(sc.next());
-            //点数を求める(負の数になったら0とする)
-            if((point - absent * 5) >= 0){
-              score = point - absent * 5;
-            } else {
-              score = 0;
-            }
-            //合格点に達しているか判定
-            if(score >= passPoint){
-                System.out.println(i + 1);
-            }
+    //入力データを受け取る
+    Scanner sc = new Scanner(System.in);
+    sc.useDelimiter(" ,|\\s");
+		//箱の側面の数
+    int charLength = Integer.parseInt(sc.next());
+		//完成形の箱の側面を表す文字列
+    String str1 = sc.next();
+		//初期の箱の側面を表す文字列
+		String str2 = sc.next();
+		//回転させた回数
+    int moveCount = 0;
+    for(int i = 0; i < charLength; i++){
+      //向きが一致したら処理終了
+			if(str1.equals(str2)){
+        break;
+      } else {
+			  //回転後の箱の側面を表す変数
+        StringBuilder sb = new StringBuilder();
+				//末尾に追加する文字
+        String lastChar = new String();
+        //回転数を1追加する
+				moveCount ++;
+        for(int j = 0; j < charLength; j++){
+				  if(j == 0){
+				    //回転前に先頭だった文字は末尾に追加するため一旦退避させる
+            lastChar = str2.substring(j,j+1);
+          } else {
+				    //先頭文字以外はそのまま追加する
+            sb.append(str2.substring(j,j+1));
+          }
         }
+				//末尾に先頭だった文字を追加する
+        sb.append(lastChar);
+				//比較のため型変換を行う
+        str2 = new String(sb);
+      }
     }
+    System.out.println(moveCount);
+  }
 }
