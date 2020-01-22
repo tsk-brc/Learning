@@ -9,17 +9,17 @@ public class Main {
 
         //入力データを受け取る
         Scanner sc = new Scanner(System.in);
-		//置換回数
+        //置換回数
         int replace =Integer.parseInt(sc.next());
         //置換ルール
-		String str = sc.next();
+        String str = sc.next();
         //ダミーデータ(改行コードのみ)
-		String Dummy = sc.nextLine();
-		//暗号化されたデータ
+        String Dummy = sc.nextLine();
+        //暗号化されたデータ
         String target = sc.nextLine();
-		//置換ルールをアルファベットごとに格納する配列
+        //置換ルールをアルファベットごとに格納する配列
         String[] English = new String[26];
-		//アルファベットを配列に格納
+        //アルファベットを配列に格納
         String[] alphabet = new String[26];
         String copy = target;
         alphabet[0] = "a";
@@ -48,21 +48,21 @@ public class Main {
         alphabet[23] = "x";
         alphabet[24] = "y";
         alphabet[25] = "z";
-		//置換ルールを配列に1文字ずつばらす
+        //置換ルールを配列に1文字ずつばらす
         for(int i = 0; i < str.length(); i++){
           English[i] = str.substring(i , i + 1);
         }
-		//置換回数分、処理を実行
+        //置換回数分、処理を実行
         for(int j = 0; j < replace; j++){
           StringBuilder sb = new StringBuilder();
           for(int k = 0; k < copy.length(); k++){
             for(int l = 0; l < 26; l++){
               //スペースはそのままスペースとする
-			  if(copy.substring(k, k + 1).equals(" ")){
+              if(copy.substring(k, k + 1).equals(" ")){
                 sb.append(" ");
                 break;
               } else {
-			    //ルールと照合して置換する
+                //ルールと照合して置換する
                 if(copy.substring(k, k + 1).equals(English[l])){
                   sb.append(alphabet[l]);
                   break;
