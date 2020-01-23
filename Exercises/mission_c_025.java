@@ -43,7 +43,7 @@ public class Main {
             reHour = hour;
           }
         }
-		//運んだ総数を出力
+        //運んだ総数を出力
         if(sumPaper % maxPaper == 0){
           System.out.println(carryNum + (sumPaper / maxPaper));
         } else {
