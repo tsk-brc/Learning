@@ -22,7 +22,7 @@ public class Main {
         int amari = 0;
         //容器の数
         int pack = 0;
-		//容器から余ったの個数
+        //容器から余ったの個数
         int perNum = 1000;
         //対象の機械
         int targetMachine = 0;
