@@ -22,7 +22,7 @@ public class Main {
         int Bmoney = Integer.parseInt(sc.next());
         //処理が継続できるか
         boolean checkFlg = true;
-		//プログラムが動いた回数
+        //プログラムが動いた回数
         int turn = 1;
         while(checkFlg){
           //奇数回目はAさんのプログラムを作動
