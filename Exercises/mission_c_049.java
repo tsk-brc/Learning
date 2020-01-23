@@ -12,7 +12,7 @@ public class Main {
         //エレベーターが動く回数
         int count = Integer.parseInt(sc.nextLine());
         //エレベーターが動いた階数
-		int mv = 0;
+        int mv = 0;
         //前回何階にいたか
         int rePlace = 0;
         for (int i = 0; i < count; i++){
