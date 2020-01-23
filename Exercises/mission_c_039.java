@@ -15,7 +15,7 @@ public class Main {
         String str = sc.nextLine();
         //計算結果
         int num = 0;
-		//文字列を1文字ずつ分解し検証
+        //文字列を1文字ずつ分解し検証
         for(int i = 0; i < str.length(); i++){
           //「/」であれば1を加算する
           if(str.substring(i, i + 1).equals("/")){
