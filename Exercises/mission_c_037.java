@@ -19,12 +19,12 @@ public class Main {
         int hours = Integer.parseInt(str.substring(6,8));
         //結合した文字列を格納する変数
         StringBuilder sb = new StringBuilder();
-		//時間が23時以下になるまで処理を繰り返す
+        //時間が23時以下になるまで処理を繰り返す
         while(hours >= 24){
           days ++;
           hours -= 24;
         }
-		//文字列をそれぞれ結合する
+        //文字列をそれぞれ結合する
         sb.append(str.substring(0,3));
         sb.append(String.format("%02d",days));
         sb.append(str.substring(5,6));
