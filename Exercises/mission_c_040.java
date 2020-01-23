@@ -23,7 +23,7 @@ public class Main {
           String str = sc.next();
           //対象の人の身長
           double height = Double.parseDouble(sc.next());
-          //「le」ならば上限に、「ge」ならば加減に設定
+          //「le」ならば上限に、「ge」ならば下限に設定
           if(str.equals("le")){
             if(height < maxHeight){
               maxHeight = height;
