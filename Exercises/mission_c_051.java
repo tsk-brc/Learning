@@ -19,7 +19,7 @@ public class Main {
         int smallNum = 0;
         //最小のカードの値
         int minNum = 0;
-		//組み合わせによる最大値
+        //組み合わせによる最大値
         int maxSumNum = 0;
         for(int i = 0;i < 4; i++){
           //カードを受け取る
