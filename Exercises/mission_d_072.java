@@ -11,11 +11,11 @@ public class Main {
         sc.useDelimiter(" |\\s");
         //バックアップするデータ容量
         int backupData = Integer.parseInt(sc.next());
-        //HDDの容量
+        //SSDの容量
         int dataSize = Integer.parseInt(sc.next());
-        //HDDの値段
+        //SSDの値段
         int money = Integer.parseInt(sc.next());
-        //購入すべきHDDの値段を算出
+        //購入すべきSSDの値段を算出
         if(backupData % dataSize == 0){
           System.out.println(backupData / dataSize * money);    
         } else {
