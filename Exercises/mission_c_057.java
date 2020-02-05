@@ -19,9 +19,9 @@ public class Main {
         int maxX = nowX;
         //風が吹いている時間ループ
         for(int i = 0; i < TimeNum; i++){
-          //風の強さ(X座標)
+          //風の強さ(X軸方向)
           int x = Integer.parseInt(sc.next());
-          //風の強さ(Y座標)
+          //風の強さ(Y軸方向)
           int y = Integer.parseInt(sc.next());
           //地面に接触したかどうか
           if(nowY + y <= 0){
