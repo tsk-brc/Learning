@@ -1,7 +1,7 @@
 import java.util.*;
 
 /*
-  各国の時差を求める。
+  各国の現在時刻を求める。
 */
 public class Main {
     public static void main(String[] args) {
