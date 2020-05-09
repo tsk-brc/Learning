@@ -1,5 +1,4 @@
 # encoding: utf-8
-Encoding.default_external = "utf-8"
 def signature(word)
   # 単語のシグネチャーを作成(英字は大文字に変換)
   word.encode("utf-8").upcase.chars.sort.join.intern
