@@ -1,9 +1,9 @@
 # 処理に使用する中間ファイル
-expection/url/*
-expection/html/*
-expection/csv/*
+expectation/url/*
+expectation/html/*
+expectation/csv/*
 !.gitkeep
 
 # 処理結果を格納するログファイル
-expection/log/*
+expectation/log/*
 !.gitkeep
