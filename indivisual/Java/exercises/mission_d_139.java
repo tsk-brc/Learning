@@ -7,33 +7,33 @@ import java.util.*;
 */
 
 public class Main {
-    public static void main(String[] args) {
+  public static void main(String[] args) {
 
-        //入力データを受け取る
-        Scanner sc = new Scanner(System.in);
-        //参加人数
-        int num = Integer.parseInt(sc.next());
-        //グーを出した人数
-        int gCount = 0;
-        //パーを出した人数
-        int pCount = 0;
-        //全員の手をチェック
-        for(int i = 0; i < num; i++){
-          String str = sc.next();
-          if(str.equals("G")){
-            gCount++;
-          } else {
-            pCount++;
-          }
-        }
-        //勝敗を判定
-        if(gCount < pCount){
-          System.out.println("G");
-        } else if(gCount > pCount){
-          System.out.println("P");  
-        } else {
-          System.out.println("Draw"); 
-        }
-        
+    // 入力データを受け取る
+    Scanner sc = new Scanner(System.in);
+    // 参加人数
+    int num = Integer.parseInt(sc.next());
+    // グーを出した人数
+    int gCount = 0;
+    // パーを出した人数
+    int pCount = 0;
+    // 全員の手をチェック
+    for (int i = 0; i < num; i++) {
+      String str = sc.next();
+      if (str.equals("G")) {
+        gCount++;
+      } else {
+        pCount++;
+      }
     }
+    // 勝敗を判定
+    if (gCount < pCount) {
+      System.out.println("G");
+    } else if (gCount > pCount) {
+      System.out.println("P");
+    } else {
+      System.out.println("Draw");
+    }
+
+  }
 }

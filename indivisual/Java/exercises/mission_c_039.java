@@ -8,23 +8,23 @@ import java.util.*;
     ・"+"が足し算の記号を表す。
 */
 public class Main {
-    public static void main(String[] args) {
+  public static void main(String[] args) {
 
-        //入力データを受け取る
-        Scanner sc = new Scanner(System.in);
-        String str = sc.nextLine();
-        //計算結果
-        int num = 0;
-        //文字列を1文字ずつ分解し検証
-        for(int i = 0; i < str.length(); i++){
-          //「/」であれば1を加算する
-          if(str.substring(i, i + 1).equals("/")){
-            num ++;
-          //「<」であれば10を加算する
-          } else if(str.substring(i, i + 1).equals("<")){
-            num += 10;  
-          }
-        }
-        System.out.println(num);
+    // 入力データを受け取る
+    Scanner sc = new Scanner(System.in);
+    String str = sc.nextLine();
+    // 計算結果
+    int num = 0;
+    // 文字列を1文字ずつ分解し検証
+    for (int i = 0; i < str.length(); i++) {
+      // 「/」であれば1を加算する
+      if (str.substring(i, i + 1).equals("/")) {
+        num++;
+        // 「<」であれば10を加算する
+      } else if (str.substring(i, i + 1).equals("<")) {
+        num += 10;
+      }
     }
+    System.out.println(num);
+  }
 }

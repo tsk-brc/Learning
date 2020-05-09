@@ -14,11 +14,11 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
 
-        //入力データを受け取る
+        // 入力データを受け取る
         Scanner sc = new Scanner(System.in);
         String str = sc.nextLine();
 
-        //置換ルールを適用する
+        // 置換ルールを適用する
         String str1 = str.replace("A", "4");
         String str2 = str1.replace("E", "3");
         String str3 = str2.replace("G", "6");
@@ -27,7 +27,7 @@ public class Main {
         String str6 = str5.replace("S", "5");
         String str7 = str6.replace("Z", "2");
 
-        //ルール適用後の値を出力する
+        // ルール適用後の値を出力する
         System.out.println(str7);
     }
 }

@@ -8,11 +8,11 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
 
-        //入力データを受け取る
+        // 入力データを受け取る
         Scanner sc = new Scanner(System.in);
-        //乗車した区間
+        // 乗車した区間
         String str = sc.nextLine();
-        //運賃を計算
+        // 運賃を計算
         System.out.println(100 + (10 * Integer.parseInt(str)));
     }
 }

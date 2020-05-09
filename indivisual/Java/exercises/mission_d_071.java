@@ -7,24 +7,24 @@ import java.util.*;
       気温が25度以上かつ、湿度40%以下の日は砂ぼこりが舞うので干さない。
 */
 public class Main {
-    public static void main(String[] args) {
+  public static void main(String[] args) {
 
-        //入力データを受け取る
-        Scanner sc = new Scanner(System.in);
-        sc.useDelimiter(" |\\s");
-        //気温
-        int num1 = Integer.parseInt(sc.next());
-        //湿度
-        int num2 = Integer.parseInt(sc.next());
-        //外に干すか判定
-        if(num1 >= 25 || num2 <= 40){
-          if(num1 >= 25 && num2 <= 40){
-            System.out.println("No");
-          } else {
-            System.out.println("Yes");  
-          }
-        } else {
-          System.out.println("No");
-        }
+    // 入力データを受け取る
+    Scanner sc = new Scanner(System.in);
+    sc.useDelimiter(" |\\s");
+    // 気温
+    int num1 = Integer.parseInt(sc.next());
+    // 湿度
+    int num2 = Integer.parseInt(sc.next());
+    // 外に干すか判定
+    if (num1 >= 25 || num2 <= 40) {
+      if (num1 >= 25 && num2 <= 40) {
+        System.out.println("No");
+      } else {
+        System.out.println("Yes");
+      }
+    } else {
+      System.out.println("No");
     }
+  }
 }
