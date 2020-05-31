@@ -7,3 +7,10 @@ expectation/csv/*
 # 処理結果を格納するログファイル
 expectation/log/*
 !.gitkeep
+
+# クイズアプリの画像ファイル
+quiz/web/images/*.jpg
+
+# クイズアプリのdataファイル
+quiz/mysql/data/*
+!.gitkeep
