@@ -16,7 +16,7 @@ $password = 'root-pass';
 try{
     $dbh = new PDO($dsn, $user, $password);
 
-    $sql = 'SELECT * FROM quiz ORDER BY RAND() LIMIT 1;';
+    $sql = 'SELECT * FROM quiz WHERE status != 0 ORDER BY RAND() LIMIT 1;';
     foreach ($dbh->query($sql) as $row) {
         echo <<<EOM
           <form action="#" name="form2">
