@@ -16,7 +16,7 @@ $password = 'root-pass';
 try{
     $dbh = new PDO($dsn, $user, $password);
 
-    $sql = 'SELECT * FROM quiz WHERE phonetic IS NOT NULL ORDER BY RAND() LIMIT 1;';
+    $sql = 'SELECT * FROM quiz ORDER BY RAND() LIMIT 1;';
     foreach ($dbh->query($sql) as $row) {
         echo <<<EOM
           <form action="#" name="form2">
@@ -26,9 +26,9 @@ try{
           <form action="#" name="form1">
             <textarea name="field1" cols="100" rows="5" style="border:none; font-size:1.5em; resize:none;" wrap="soft"></textarea>
           </form>
-          <div id="sentense" hidden="hidden">$row[2]</div>
+          <div id="sentense" hidden="hidden">$row[1]</div>
           <div id="value1" hidden="hidden">$row[1]</div>
-          <div id="value2" hidden="hidden">$row[3]</div>
+          <div id="value2" hidden="hidden">$row[2]</div>
           <div id="lavel"></div>
           <div id="answer"></div>
           <script>
@@ -49,7 +49,7 @@ try{
 
              var disp = function(){
                if(titlecount < 5){
-                 var title = "もんだい";
+                 var title = "問題";
                  var type = title.substring(0, titlecount);
                  document.form2.title.value = type;
                  titlecount++;

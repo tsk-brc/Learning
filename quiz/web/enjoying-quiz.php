@@ -19,14 +19,9 @@ print('<br />');
 try{
     $dbh = new PDO($dsn, $user, $password);
 
-    $sql = 'SELECT * FROM quiz WHERE phonetic IS NOT NULL ORDER BY RAND() LIMIT 1;';
+    $sql = 'SELECT * FROM quiz ORDER BY RAND() LIMIT 1;';
     foreach ($dbh->query($sql) as $row) {
         print($row['quiz_sentence']);
-        print('<br />');
-        print('<br />');
-        print('読み');
-        print('<br />');
-        print($row['phonetic']);
         print('<br />');
         print('<br />');
         print('答え');

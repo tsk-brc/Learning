@@ -36,7 +36,7 @@ try{
         
         echo <<<EOM
           <p> $row[1] </p>
-          <div id=value hidden=hidden>$row[3]</div>
+          <div id=value hidden=hidden>$row[2]</div>
           
           <input type=button value=答えを見る style='width:100px; height:30px' onclick=show() />
           <input type=button id=choice value=他の問題を選ぶ style='width:120px; height:30px; display:inline' onclick=location.href='training-quiz.php' />
