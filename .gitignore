@@ -14,3 +14,6 @@ quiz/web/images/*.jpg
 # クイズアプリのdataファイル
 quiz/mysql/data/*
 !.gitkeep
+
+# TONGUESSのpycache
+tonguess/__pycache__
