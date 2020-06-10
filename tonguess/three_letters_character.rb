@@ -1,5 +1,5 @@
 # encoding: utf-8
-    open('./tonguess/usable_3letters.txt', 'w'){|f|
+    open('./tonguess/usable_select_3letters_words.txt', 'w'){|f|
     26.times do |num1|
       str1 = nil
       case num1
