@@ -17,6 +17,3 @@ quiz/mysql/data/*
 
 # TONGUESSのpycache
 tonguess/__pycache__
-
-# TONGUESSでcallできる文字列を出力したファイル
-tonguess/usable_str.txt

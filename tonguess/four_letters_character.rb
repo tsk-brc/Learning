@@ -1,5 +1,5 @@
 # encoding: utf-8
-    open('./tonguess/usable_str.txt', 'w'){|f|
+    open('./tonguess/usable_4letters.txt', 'w'){|f|
     26.times do |num1|
       str1 = nil
       case num1
@@ -114,60 +114,117 @@
         26.times do |num|
           case num
           when 0 then
-            str = "#{str2}A"
+            str3 = "#{str2}A"
           when 1 then  
-            str = "#{str2}B"
+            str3 = "#{str2}B"
           when 2 then
-            str = "#{str2}C"
+            str3 = "#{str2}C"
           when 3 then
-            str = "#{str2}D"
+            str3 = "#{str2}D"
           when 4 then
-            str = "#{str2}E"
+            str3 = "#{str2}E"
           when 5 then
-            str = "#{str2}F"
+            str3 = "#{str2}F"
           when 6 then
-            str = "#{str2}G"
+            str3 = "#{str2}G"
           when 7 then
-            str = "#{str2}H"
+            str3 = "#{str2}H"
           when 8 then
-            str = "#{str2}I"
+            str3 = "#{str2}I"
           when 9 then
-            str = "#{str2}J"
+            str3 = "#{str2}J"
           when 10 then
-            str = "#{str2}K"
+            str3 = "#{str2}K"
           when 11 then
-            str = "#{str2}L"
+            str3 = "#{str2}L"
           when 12 then
-            str = "#{str2}M"
+            str3 = "#{str2}M"
           when 13 then
-            str = "#{str2}N"
+            str3 = "#{str2}N"
           when 14 then
-            str = "#{str2}O"
+            str3 = "#{str2}O"
           when 15 then
-            str = "#{str2}P"
+            str3 = "#{str2}P"
           when 16 then
-            str = "#{str2}Q"
+            str3 = "#{str2}Q"
           when 17 then
-            str = "#{str2}R"
+            str3 = "#{str2}R"
           when 18 then
-            str = "#{str2}S"
+            str3 = "#{str2}S"
           when 19 then
-            str = "#{str2}T"
+            str3 = "#{str2}T"
           when 20 then
-            str = "#{str2}U"
+            str3 = "#{str2}U"
           when 21 then
-            str = "#{str2}V"
+            str3 = "#{str2}V"
           when 22 then
-            str = "#{str2}W"
+            str3 = "#{str2}W"
           when 23 then
-            str = "#{str2}X"
+            str3 = "#{str2}X"
           when 24 then
-            str = "#{str2}Y"
+            str3 = "#{str2}Y"
           when 25 then
-            str = "#{str2}Z"
+            str3 = "#{str2}Z"
           end
-          if str.slice(0) != str.slice(1) and str.slice(1) != str.slice(2) and str.slice(2) != str.slice(0)
-            f.puts str
+          26.times do |num|
+            case num
+            when 0 then
+              str = "#{str3}A"
+            when 1 then  
+              str = "#{str3}B"
+            when 2 then
+              str = "#{str3}C"
+            when 3 then
+              str = "#{str3}D"
+            when 4 then
+              str = "#{str3}E"
+            when 5 then
+              str = "#{str3}F"
+            when 6 then
+              str = "#{str3}G"
+            when 7 then
+              str = "#{str3}H"
+            when 8 then
+              str = "#{str3}I"
+            when 9 then
+              str = "#{str3}J"
+            when 10 then
+              str = "#{str3}K"
+            when 11 then
+              str = "#{str3}L"
+            when 12 then
+              str = "#{str3}M"
+            when 13 then
+              str = "#{str3}N"
+            when 14 then
+              str = "#{str3}O"
+            when 15 then
+              str = "#{str3}P"
+            when 16 then
+              str = "#{str3}Q"
+            when 17 then
+              str = "#{str3}R"
+            when 18 then
+              str = "#{str3}S"
+            when 19 then
+              str = "#{str3}T"
+            when 20 then
+              str = "#{str3}U"
+            when 21 then
+              str = "#{str3}V"
+            when 22 then
+              str = "#{str3}W"
+            when 23 then
+              str = "#{str3}X"
+            when 24 then
+              str = "#{str3}Y"
+            when 25 then
+              str = "#{str3}Z"
+            end
+            if str.slice(0) != str.slice(1) and str.slice(0) != str.slice(2) and str.slice(0) != str.slice(3) and 
+               str.slice(1) != str.slice(2) and str.slice(1) != str.slice(3) and str.slice(2) != str.slice(3) 
+              f.puts str
+            end
           end
         end
       end
