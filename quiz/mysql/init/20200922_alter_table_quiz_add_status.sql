@@ -1,0 +1,1 @@
+ALTER TABLE quiz MODIFY status int(1) DEFAULT 0 COMMENT 'ステータス(0:未暗記|1:暗記済|8:旧情報|9:暗記不要)' AFTER level;
