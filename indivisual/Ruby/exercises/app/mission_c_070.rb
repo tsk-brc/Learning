@@ -9,30 +9,35 @@
   ・簡易ポーカーでは手札4枚の数字を小さい順に並べたものが配られる。
 =end
 
-# ゲームの回数
-count = gets
-# ゲームの回数分ループ
-count.to_i.times do |num|
-  # 配られたカード
-  data = gets
-  # 配られたカードの1枚目
-  one = data[0,1]
-  # 配られたカードの2枚目
-  two = data[1,1]
-  # 配られたカードの3枚目
-  three = data[2,1]
-  # 配られたカードの4枚目
-  four = data[3,1]
-  # Pair check
-  if one == two and two == three and three == four
-     puts "Four Card"
-  elsif (one == two and two == three) or (two == three and three == four)
-    puts "Three Card"
-  elsif one == two and  three == four
-    puts "Two Pair"
-  elsif one == two or two == three or three == four
-    puts "One Pair"
-  else
-    puts "No Pair"
+class MissionC070
+
+  def run
+    # ゲームの回数
+    count = STDIN.gets
+    # ゲームの回数分ループ
+    count.to_i.times do |num|
+      # 配られたカード
+      data = STDIN.gets
+      # 配られたカードの1枚目
+      one = data[0,1]
+      # 配られたカードの2枚目
+      two = data[1,1]
+      # 配られたカードの3枚目
+      three = data[2,1]
+      # 配られたカードの4枚目
+      four = data[3,1]
+      # Pair check
+      if one == two and two == three and three == four
+        puts "Four Card"
+      elsif (one == two and two == three) or (two == three and three == four)
+        puts "Three Card"
+      elsif one == two and  three == four
+        puts "Two Pair"
+      elsif one == two or two == three or three == four
+        puts "One Pair"
+      else
+        puts "No Pair"
+      end
+    end
   end
 end
