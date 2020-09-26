@@ -8,3 +8,9 @@ brew install cloc
 ターミナルでコード行数を確認したいディレクトリに移動し、
 以下のコマンドを実行
 cloc .
+
+
+rspecの実行
+/github/indivisual/Ruby/exercisesに移動し
+bundle exec rspec spec/
+を実行
