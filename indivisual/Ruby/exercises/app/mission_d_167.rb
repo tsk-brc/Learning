@@ -9,10 +9,6 @@ class MissionD167
     # 購入金額
     amount = STDIN.gets.to_i
     # 1000円以上なら買い物袋を購入する
-    if amount >= 1000
-      puts amount + 3
-    else
-      puts amount
-    end
+    puts amount >= 1000 ? amount + 3 : amount
   end
 end

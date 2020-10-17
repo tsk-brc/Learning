@@ -10,10 +10,6 @@ class MissionD152
     # 判定する数
     check = STDIN.gets.to_i
     # 指定数以上含まれているか
-    if str.count('R') >= check
-      puts 'Yes'
-    else
-      puts 'No'
-    end
+    puts str.count('R') >= check ? 'Yes' : 'No'
   end
 end

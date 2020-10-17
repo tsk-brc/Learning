@@ -14,12 +14,6 @@ class MissionD155
      # 合計金額
      money = 0
      # 団体料金が適用されるか
-     if person >= list[0].to_i
-       money = person * list[1].to_i
-     else
-       money = person * list[2].to_i
-     end
-     # 結果を出力
-     puts money
+     puts person >= list[0].to_i ? person * list[1].to_i : person * list[2].to_i
    end
 end

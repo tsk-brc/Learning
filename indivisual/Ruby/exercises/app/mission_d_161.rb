@@ -14,10 +14,6 @@ class MissionD161
       total += STDIN.gets.to_i
     }
     # 貯水量を出力
-    if maxNum >= total
-      puts total
-    else
-      puts maxNum
-    end
+    puts maxNum >= total ? total : maxNum
   end
 end

@@ -10,10 +10,6 @@ class MissionD150
     # 目標数
     target = STDIN.gets.to_i
     # 目標に到達しているか判定
-    if subscribers >= target
-      puts "Thank you"
-    else
-      puts target - subscribers
-    end
+    puts subscribers >= target ? 'Thank you' : target - subscribers
   end
 end
