@@ -32,20 +32,15 @@ class MissionB079
     while alphabet_num_convert.size > 1 do
       # 現在の配列数を取得
       loop_count = alphabet_num_convert.size
-      # 隣の配列の値を加算した値を格納しておく中間配列
-      tmp_alphabet_num_convert = []
       # 配列数分ループ
       loop_count.times { |num|
-        # 加算した値が101より大きい値なら101を引いてから中間配列に格納
-        tmp_alphabet_num_convert.push(alphabet_num_convert[num].to_i + alphabet_num_convert[num + 1].to_i < 101 ? 
+        # 加算した値が101より大きい値なら101を引いてからnum番目の値を置き換え
+        # (配列の前から順番に処理しているので、今後のループ処理内でもnum番目の値が置き換わっても影響しない)
+        alphabet_num_convert[num] = alphabet_num_convert[num].to_i + alphabet_num_convert[num + 1].to_i < 101 ? 
           alphabet_num_convert[num].to_i + alphabet_num_convert[num + 1].to_i : 
-          alphabet_num_convert[num].to_i + alphabet_num_convert[num + 1].to_i - 101)
+          alphabet_num_convert[num].to_i + alphabet_num_convert[num + 1].to_i - 101
       }
-      # 元の配列を初期化
-      alphabet_num_convert = []
-      # 配列の値をコピー
-      alphabet_num_convert = tmp_alphabet_num_convert
-      # 値が1つ減っているので配列の末尾を削除
+      # 値が1つ減るので配列の末尾を削除
       alphabet_num_convert.pop(1)
     end
     # 配列が1つになっているので、格納されている値を呼び出し元に返却
