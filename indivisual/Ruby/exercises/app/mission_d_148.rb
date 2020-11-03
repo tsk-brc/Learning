@@ -10,6 +10,8 @@ class MissionD148
     # 合格点
     targetScore = STDIN.gets.to_i
     # 合計点
-    puts scoreArray[0].to_i >= targetScore ? scoreArray[0].to_i + scoreArray[1].to_i : scoreArray[0].to_i
+    puts scoreArray[0].to_i >= targetScore ?
+    scoreArray[0].to_i + scoreArray[1].to_i :
+    scoreArray[0].to_i
   end
 end

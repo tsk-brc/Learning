@@ -31,9 +31,11 @@ class MissionB084
       # 店舗数分ループ
       shop.times { |num2|
         # 評価がどちらも3ならば好みの数に加算
-        count += 1 if myself_info[num2].to_i == target_info[num2].to_i && myself_info[num2].to_i == 3
+        count += 1 if myself_info[num2].to_i == target_info[num2].to_i &&
+        myself_info[num2].to_i == 3
         # 自分が行ったことないかつユーザの評価が3の店舗番号を追加
-        wanna_go_shop << num2 + 1 if myself_info[num2].to_i == 0 && target_info[num2].to_i == 3
+        wanna_go_shop << num2 + 1 if myself_info[num2].to_i == 0 &&
+        target_info[num2].to_i == 3
       }
       # 好みの数が一定数以上なら行きたいお店の配列に追加([1,2,[3,4]]のような多次元配列になる場合あり)
       wanna_go_shop_list << wanna_go_shop if count >= target
@@ -41,6 +43,7 @@ class MissionB084
     # 多次元配列を一次元配列に戻す
     wanna_go_shop_list.flatten!
     # 重複を削除し、店舗番号昇順にして出力
-    puts wanna_go_shop_list.size != 0 ? wanna_go_shop_list.uniq.sort.join(' ') : 'no'
+    puts wanna_go_shop_list.size != 0 ?
+    wanna_go_shop_list.uniq.sort.join(' ') : 'no'
   end
 end

@@ -272,3 +272,6 @@ Performance/DeletePrefix:
 
 Performance/DeleteSuffix:
   Enabled: true
+
+LineLength:
+  Max: 80

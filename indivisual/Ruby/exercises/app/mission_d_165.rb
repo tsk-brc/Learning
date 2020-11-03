@@ -10,7 +10,9 @@ class MissionD165
     # 比較しやすいようにソートしておく
     strSortArrat = strArray.sort
     # 同じ文字列があるか比較
-    if (strSortArrat[1] != strSortArrat[2]) && (strSortArrat[2] != strSortArrat[3]) && (strSortArrat[3] != strSortArrat[4])
+    if (strSortArrat[1] != strSortArrat[2]) &&
+      (strSortArrat[2] != strSortArrat[3]) &&
+      (strSortArrat[3] != strSortArrat[4])
       puts 'OK'
     else
       puts 'NG'

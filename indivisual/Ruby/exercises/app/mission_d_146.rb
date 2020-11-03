@@ -10,7 +10,8 @@ class MissionD146
     abbreviation = ''
     # 母音を削除
     str.length.times do |num|
-      if str[num, 1] != 'a' && str[num, 1] != 'i' && str[num, 1] != 'u' && str[num, 1] != 'e' && str[num, 1] != 'o'
+      if str[num, 1] != 'a' && str[num, 1] != 'i' && str[num, 1] != 'u' &&
+        str[num, 1] != 'e' && str[num, 1] != 'o'
         abbreviation << str[num, 1]
       end
     end

@@ -35,9 +35,11 @@ class MissionB079
       loop_count.times { |num|
         # 加算した値が101より大きい値なら101を引いてからnum番目の値を置き換え
         # (配列の前から順番に処理しているので、今後のループ処理内でもnum番目の値が置き換わっても影響しない)
-        alphabet_num_convert[num] = alphabet_num_convert[num].to_i + alphabet_num_convert[num + 1].to_i < 101 ?
+        alphabet_num_convert[num] = alphabet_num_convert[num].to_i +
+        alphabet_num_convert[num + 1].to_i < 101 ?
           alphabet_num_convert[num].to_i + alphabet_num_convert[num + 1].to_i :
-          alphabet_num_convert[num].to_i + alphabet_num_convert[num + 1].to_i - 101
+          alphabet_num_convert[num].to_i +
+          alphabet_num_convert[num + 1].to_i - 101
       }
       # 値が1つ減るので配列の末尾を削除
       alphabet_num_convert.pop(1)

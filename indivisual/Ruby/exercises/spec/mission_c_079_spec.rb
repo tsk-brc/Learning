@@ -5,13 +5,26 @@ describe 'カードコンプリートのチェック' do
     let(:missionC079) { MissionC079.new }
 
     it 'テスト1' do
-      allow(STDIN).to receive(:gets).and_return "6 3\n", "1\n", "2\n", "2\n", "3\n", "1\n", "3\n"
+      allow(STDIN).to receive(:gets).and_return "6 3\n",
+      "1\n",
+      "2\n",
+      "2\n",
+      "3\n",
+      "1\n",
+      "3\n"
       expect(STDOUT).to receive(:puts).with(4)
       missionC079.run
     end
 
     it 'テスト2' do
-      allow(STDIN).to receive(:gets).and_return "7 4\n", "1\n", "2\n", "3\n", "1\n", "2\n", "3\n", "1\n"
+      allow(STDIN).to receive(:gets).and_return "7 4\n",
+      "1\n",
+      "2\n",
+      "3\n",
+      "1\n",
+      "2\n",
+      "3\n",
+      "1\n"
       expect(STDOUT).to receive(:puts).with('unlucky')
       missionC079.run
     end

@@ -28,7 +28,8 @@ class MissionC080
       # 不正解数がゲームオーバーの回数に到達したらループを抜ける
       break if wrong_count == game_rule[1].to_i
       # 次に正解になるボタン番号を更新
-      should_push_button_number == game_rule[0].to_i ? should_push_button_number = 1 : should_push_button_number += 1
+      should_push_button_number == game_rule[0].to_i ?
+      should_push_button_number = 1 : should_push_button_number += 1
     end
     # スコアを出力
     puts wrong_count != game_rule[1].to_i ? score : -1

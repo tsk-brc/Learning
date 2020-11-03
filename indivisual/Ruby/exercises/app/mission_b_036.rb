@@ -102,6 +102,7 @@ class MissionB036
       }
     }
     # 獲得した票数が多い候補者の番号を出力
-    puts republican_count > democratic_count ? republican_represent : democratic_represent
+    puts republican_count > democratic_count ?
+    republican_represent : democratic_represent
   end
 end

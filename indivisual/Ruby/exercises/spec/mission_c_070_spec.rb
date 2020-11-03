@@ -5,7 +5,15 @@ describe '簡易ポーカー役チェック' do
     let(:missionC070) { MissionC070.new }
 
     it 'テスト1' do
-      allow(STDIN).to receive(:gets).and_return "8\n", "7777\n", "2229\n", "5566\n", "2669\n", "1689\n", "1333\n", "1189\n", "3588\n"
+      allow(STDIN).to receive(:gets).and_return "8\n",
+      "7777\n",
+      "2229\n",
+      "5566\n",
+      "2669\n",
+      "1689\n",
+      "1333\n",
+      "1189\n",
+      "3588\n"
       expect(STDOUT).to receive(:puts).with('Four Card')
       expect(STDOUT).to receive(:puts).with('Three Card')
       expect(STDOUT).to receive(:puts).with('Two Pair')

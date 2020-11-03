@@ -36,7 +36,8 @@ class MissionC082
         # 各生徒の得点を比較
         scoreInfo[0].to_i.times do |num3|
           # 赤点の得点だった場合に赤点の教科数を1加算する
-          if allStudentScore[target] == score[num3][subject].to_i && targetScore != allStudentScore[target]
+          if allStudentScore[target] == score[num3][subject].to_i &&
+            targetScore != allStudentScore[target]
             failedScore[num3] += 1
           end
         end

@@ -5,7 +5,10 @@ describe 'レポート評価チェック' do
     let(:missionC077) { MissionC077.new }
 
     it 'テスト1' do
-      allow(STDIN).to receive(:gets).and_return "3 25\n", "-2 17\n", "-7 20\n", "2 24\n"
+      allow(STDIN).to receive(:gets).and_return "3 25\n",
+      "-2 17\n",
+      "-7 20\n",
+      "2 24\n"
       expect(STDOUT).to receive(:puts).with('C')
       expect(STDOUT).to receive(:puts).with('A')
       expect(STDOUT).to receive(:puts).with('B')

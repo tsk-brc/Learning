@@ -28,7 +28,8 @@ class MissionC070
       # Pair check
       if (one == two) && (two == three) && (three == four)
         puts 'Four Card'
-      elsif ((one == two) && (two == three)) || ((two == three) && (three == four))
+      elsif ((one == two) && (two == three)) ||
+        ((two == three) && (three == four))
         puts 'Three Card'
       elsif (one == two) &&  (three == four)
         puts 'Two Pair'
