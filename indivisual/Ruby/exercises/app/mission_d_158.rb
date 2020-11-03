@@ -7,6 +7,6 @@ class MissionD158
     # 湿度の値
     humidity = STDIN.gets.to_i
     # 湿度チェック
-    puts humidity >= 40 && humidity <= 60 ? 'OK' : 'NG'
+    puts (humidity >= 40 && humidity <= 60) ? 'OK' : 'NG'
   end
 end
