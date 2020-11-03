@@ -2,7 +2,6 @@ require './app/mission_d_150.rb'
 
 describe '目標値差分チェック' do
   describe '出力結果のテスト' do
-
     let(:missionD150) { MissionD150.new }
 
     it 'テスト1' do

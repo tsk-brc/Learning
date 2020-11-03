@@ -2,7 +2,6 @@ require './app/mission_d_158.rb'
 
 describe '湿度チェック' do
   describe '出力結果のテスト' do
-
     let(:missionD158) { MissionD158.new }
 
     it 'テスト1' do

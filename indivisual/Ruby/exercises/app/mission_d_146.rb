@@ -3,7 +3,6 @@
 =end
 
 class MissionD146
-
   def run
     # 対象の言葉
     str = STDIN.gets.chomp!

@@ -2,7 +2,6 @@ require './app/mission_d_159.rb'
 
 describe '最大文字数チェック' do
   describe '出力結果のテスト' do
-
     let(:missionD159) { MissionD159.new }
 
     it 'テスト1' do

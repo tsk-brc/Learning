@@ -2,7 +2,6 @@ require './app/mission_d_160.rb'
 
 describe '高さ算出チェック' do
   describe '出力結果のテスト' do
-
     let(:missionD160) { MissionD160.new }
 
     it 'テスト1' do

@@ -3,7 +3,6 @@
 =end
 
 class MissionD163
-
   def run
     # 入力文字
     str = STDIN.gets.chomp

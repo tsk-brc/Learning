@@ -3,7 +3,6 @@
 =end
 
 class MissionD168
-
   def run
     # 年情報
     year = STDIN.gets.chomp!
@@ -12,6 +11,6 @@ class MissionD168
     # 日情報
     day = STDIN.gets.chomp!
     # アメリカ形式で出力
-    puts month + "/" + day + "/" +  year
+    puts month + '/' + day + '/' + year
   end
 end

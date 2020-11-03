@@ -4,7 +4,6 @@
 =end
 
 class MissionD167
-
   def run
     # 購入金額
     amount = STDIN.gets.to_i

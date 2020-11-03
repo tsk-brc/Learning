@@ -3,7 +3,6 @@
 =end
 
 class MissionD156
-
   def run
     # 1人あたりに必要な面積
     square = STDIN.gets.to_i

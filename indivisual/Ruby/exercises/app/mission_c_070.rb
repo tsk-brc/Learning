@@ -10,7 +10,6 @@
 =end
 
 class MissionC070
-
   def run
     # ゲームの回数
     count = STDIN.gets
@@ -19,24 +18,24 @@ class MissionC070
       # 配られたカード
       data = STDIN.gets
       # 配られたカードの1枚目
-      one = data[0,1]
+      one = data[0, 1]
       # 配られたカードの2枚目
-      two = data[1,1]
+      two = data[1, 1]
       # 配られたカードの3枚目
-      three = data[2,1]
+      three = data[2, 1]
       # 配られたカードの4枚目
-      four = data[3,1]
+      four = data[3, 1]
       # Pair check
-      if one == two and two == three and three == four
-        puts "Four Card"
-      elsif (one == two and two == three) or (two == three and three == four)
-        puts "Three Card"
-      elsif one == two and  three == four
-        puts "Two Pair"
-      elsif one == two or two == three or three == four
-        puts "One Pair"
+      if (one == two) && (two == three) && (three == four)
+        puts 'Four Card'
+      elsif ((one == two) && (two == three)) || ((two == three) && (three == four))
+        puts 'Three Card'
+      elsif (one == two) &&  (three == four)
+        puts 'Two Pair'
+      elsif (one == two) || (two == three) || (three == four)
+        puts 'One Pair'
       else
-        puts "No Pair"
+        puts 'No Pair'
       end
     end
   end

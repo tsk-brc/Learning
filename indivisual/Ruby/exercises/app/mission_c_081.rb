@@ -2,7 +2,6 @@
   靴下のペア数を算出する。
 =end
 class MissionC081
-
   def run
     # 靴下の数
     sox_num = STDIN.gets.to_i
@@ -13,7 +12,7 @@ class MissionC081
     # 左足の靴下を入れておく配列
     left_sox = []
     # 靴下の数分ループ
-    sox_num.times{
+    sox_num.times {
       # 靴下の情報(色 どちらの足か)
       sox_info = STDIN.gets.split
       # 右足なら左足にペアがあるか検索

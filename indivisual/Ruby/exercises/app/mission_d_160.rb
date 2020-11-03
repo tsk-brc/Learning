@@ -3,7 +3,6 @@
 =end
 
 class MissionD160
-
   def run
     # 山の高さ
     height = STDIN.gets.to_i

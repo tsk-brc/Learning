@@ -9,7 +9,6 @@
 =end
 
 class MissionB084
-
   def run
     # 各情報のリスト(店数 自分以外のユーザー数 好みの基準M)
     info_list = STDIN.gets.split
@@ -22,7 +21,7 @@ class MissionB084
     # 行きたいお店の配列
     wanna_go_shop_list = []
     # その他のユーザ数分ループ
-    user.times {|num|
+    user.times { |num|
       # 好みが一致する店舗数
       count = 0
       # あるユーザに対しての行きたいお店を格納する配列
@@ -30,7 +29,7 @@ class MissionB084
       # あるユーザの各店舗の評価
       target_info = STDIN.gets.split
       # 店舗数分ループ
-      shop.times{|num2|
+      shop.times { |num2|
         # 評価がどちらも3ならば好みの数に加算
         count += 1 if myself_info[num2].to_i == target_info[num2].to_i && myself_info[num2].to_i == 3
         # 自分が行ったことないかつユーザの評価が3の店舗番号を追加

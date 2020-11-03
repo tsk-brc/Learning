@@ -2,7 +2,6 @@ require './app/mission_c_085.rb'
 
 describe 'キー入力のチェック' do
   describe '出力結果のテスト' do
-
     let(:missionC085) { MissionC085.new }
 
     it 'テスト1' do

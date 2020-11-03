@@ -1,8 +1,7 @@
 =begin
   トレーディングカードを購入し、何枚目でコンプリートできたかを調査する。
 =end
-class MissionC079 
-
+class MissionC079
   def run
     # カードを手に入れた枚数とカードの種類
     cardInfo = STDIN.gets.split

@@ -3,7 +3,6 @@
 =end
 
 class MissionD144
-
   def run
     puts STDIN.gets.to_i(2)
   end

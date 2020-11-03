@@ -2,7 +2,6 @@ require './app/mission_d_165.rb'
 
 describe 'パスワードセキュリティチェック' do
   describe '出力結果のテスト' do
-
     let(:missionD165) { MissionD165.new }
 
     it 'テスト1' do

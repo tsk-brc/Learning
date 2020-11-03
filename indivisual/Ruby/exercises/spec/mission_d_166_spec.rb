@@ -2,7 +2,6 @@ require './app/mission_d_166.rb'
 
 describe '日数変換チェック' do
   describe '出力結果のテスト' do
-
     let(:missionD166) { MissionD166.new }
 
     it 'テスト1' do

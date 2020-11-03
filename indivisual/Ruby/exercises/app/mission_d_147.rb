@@ -4,7 +4,6 @@
 =end
 
 class MissionD147
-
   def run
     # 底面積
     bottomArea = STDIN.gets.to_i

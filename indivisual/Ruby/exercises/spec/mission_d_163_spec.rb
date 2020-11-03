@@ -2,7 +2,6 @@ require './app/mission_d_163.rb'
 
 describe '文字列縦書き出力チェック' do
   describe '出力結果のテスト' do
-
     let(:missionD163) { MissionD163.new }
 
     it 'テスト1' do

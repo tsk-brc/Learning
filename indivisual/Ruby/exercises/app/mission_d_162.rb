@@ -3,7 +3,6 @@
 =end
 
 class MissionD162
-
   def run
     # 数量
     amount = STDIN.gets.to_i

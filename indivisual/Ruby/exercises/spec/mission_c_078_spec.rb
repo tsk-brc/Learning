@@ -2,7 +2,6 @@ require './app/mission_c_078.rb'
 
 describe '株損益チェック' do
   describe '出力結果のテスト' do
-
     let(:missionC078) { MissionC078.new }
 
     it 'テスト1' do

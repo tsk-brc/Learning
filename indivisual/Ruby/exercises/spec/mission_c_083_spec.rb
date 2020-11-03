@@ -2,7 +2,6 @@ require './app/mission_c_083.rb'
 
 describe 'グラフ作成チェック' do
   describe '出力結果のテスト' do
-
     let(:missionC083) { MissionC083.new }
 
     it 'テスト1' do

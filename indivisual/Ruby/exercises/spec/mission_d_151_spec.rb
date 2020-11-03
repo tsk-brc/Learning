@@ -2,7 +2,6 @@ require './app/mission_d_151.rb'
 
 describe '値段算出チェック' do
   describe '出力結果のテスト' do
-
     let(:missionD151) { MissionD151.new }
 
     it 'テスト1' do

@@ -3,7 +3,6 @@
 =end
 
 class MissionD150
-
   def run
     # 登録者数
     subscribers = STDIN.gets.to_i

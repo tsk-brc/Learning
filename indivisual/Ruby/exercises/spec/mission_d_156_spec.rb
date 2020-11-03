@@ -2,7 +2,6 @@ require './app/mission_d_156.rb'
 
 describe '面積算出チェック' do
   describe '出力結果のテスト' do
-
     let(:missionD156) { MissionD156.new }
 
     it 'テスト1' do

@@ -2,7 +2,6 @@ require './app/mission_d_149.rb'
 
 describe '文字除去チェック' do
   describe '出力結果のテスト' do
-
     let(:missionD149) { MissionD149.new }
 
     it 'テスト1' do

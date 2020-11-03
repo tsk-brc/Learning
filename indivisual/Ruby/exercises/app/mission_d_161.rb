@@ -3,7 +3,6 @@
 =end
 
 class MissionD161
-
   def run
     # 許容できる最大量
     maxNum = STDIN.gets.to_i

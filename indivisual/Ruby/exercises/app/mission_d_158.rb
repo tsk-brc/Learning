@@ -3,7 +3,6 @@
 =end
 
 class MissionD158
-
   def run
     # 湿度の値
     humidity = STDIN.gets.to_i

@@ -2,7 +2,6 @@ require './app/mission_d_153.rb'
 
 describe '数値大小チェック' do
   describe '出力結果のテスト' do
-
     let(:missionD153) { MissionD153.new }
 
     it 'テスト1' do

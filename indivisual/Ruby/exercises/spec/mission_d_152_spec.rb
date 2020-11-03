@@ -2,7 +2,6 @@ require './app/mission_d_152.rb'
 
 describe '文字列指定数以上存在チェック' do
   describe '出力結果のテスト' do
-
     let(:missionD152) { MissionD152.new }
 
     it 'テスト1' do

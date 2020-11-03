@@ -6,7 +6,6 @@
 =end
 
 class MissionC076
-
   def run
     # 時給情報
     salaryPerHour = STDIN.gets.split
@@ -15,7 +14,7 @@ class MissionC076
     # 給料の合計
     salary = 0
     # 勤務日数分ループ
-    workCount.times{
+    workCount.times {
       # 始業時間と終業時間
       work = STDIN.gets.split
       # 勤務した時間

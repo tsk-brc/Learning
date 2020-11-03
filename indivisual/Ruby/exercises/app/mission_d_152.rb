@@ -3,7 +3,6 @@
 =end
 
 class MissionD152
-
   def run
     # 対象文字列
     str = STDIN.gets

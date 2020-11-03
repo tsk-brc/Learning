@@ -2,7 +2,6 @@ require './app/mission_d_154.rb'
 
 describe '人数算出チェック' do
   describe '出力結果のテスト' do
-
     let(:missionD154) { MissionD154.new }
 
     it 'テスト1' do

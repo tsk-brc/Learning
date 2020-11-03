@@ -2,7 +2,6 @@ require './app/mission_d_148.rb'
 
 describe '試験点チェック' do
   describe '出力結果のテスト' do
-
     let(:missionD148) { MissionD148.new }
 
     it 'テスト1' do

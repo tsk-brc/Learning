@@ -2,7 +2,6 @@ require './app/mission_d_143.rb'
 
 describe '制動距離算出チェック' do
   describe '出力結果のテスト' do
-
     let(:missionD143) { MissionD143.new }
 
     it 'テスト1' do

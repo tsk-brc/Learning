@@ -4,7 +4,6 @@
 =end
 
 class MissionD145
-
   def run
     # パラメータ
     param = STDIN.gets.split

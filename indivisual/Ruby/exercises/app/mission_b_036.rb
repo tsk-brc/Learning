@@ -5,7 +5,6 @@
 =end
 
 class MissionB036
-
   def run
     # 候補者数
     candidates = STDIN.gets.to_i
@@ -20,7 +19,7 @@ class MissionB036
     # 投票情報
     voters_info = []
     # 候補者数ループ
-    candidates.times{
+    candidates.times {
       # 候補者の党情報
       party = STDIN.gets.chomp!
       # 該当する党の獲得票数に0をセット(後続処理の判定で使用するので違う党には-1をセットしておく)
@@ -35,7 +34,7 @@ class MissionB036
     # 投票者数
     voters = STDIN.gets.to_i
     ######## 予備選挙開始 ########
-    voters.times{
+    voters.times {
       # 投票番号(1位から順番にスペース区切りで記載)
       voters_paper = STDIN.gets.split
       # 本選挙でも使用するので投票情報をコピーしておく
@@ -71,14 +70,14 @@ class MissionB036
     republican_represent = republican.max
     democratic_represent = democratic.max
     # 共和党の最大票数を獲得した候補者を抽出
-    candidates.times{ |num|
+    candidates.times { |num|
       if republican[num] == republican_represent
         republican_represent = num + 1
         break
       end
     }
     # 民主党の最大票数を獲得した候補者を抽出
-    candidates.times{ |num|
+    candidates.times { |num|
       if democratic[num] == democratic_represent
         democratic_represent = num + 1
         break
@@ -89,9 +88,9 @@ class MissionB036
     republican_count = 0
     democratic_count = 0
     # 投票者数分ループ
-    voters.times{|num|
+    voters.times { |num|
       # 候補者数分ループ
-      candidates.times{|num2|
+      candidates.times { |num2|
         # どちらかの党の代表者と一致したら獲得票数を加算してbreak
         if voters_info[num][num2].to_i == democratic_represent
           democratic_count += 1

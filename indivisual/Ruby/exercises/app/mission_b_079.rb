@@ -10,7 +10,6 @@
 =end
 
 class MissionB079
-
   def name_score(name1, name2)
     # 2人の名前を結合
     join_name = name1 + name2
@@ -19,7 +18,7 @@ class MissionB079
     # マッチしたアルファベットを数字に変換した配列
     alphabet_num_convert = []
     # 名前の文字数分ループ
-    join_name.length.times{ |num|
+    join_name.length.times { |num|
       # 1文字ずつマッチするアルファベットの番号を配列に格納
       alphabet.size.times { |num2|
         if join_name[num, 1] == alphabet[num2]
@@ -36,15 +35,15 @@ class MissionB079
       loop_count.times { |num|
         # 加算した値が101より大きい値なら101を引いてからnum番目の値を置き換え
         # (配列の前から順番に処理しているので、今後のループ処理内でもnum番目の値が置き換わっても影響しない)
-        alphabet_num_convert[num] = alphabet_num_convert[num].to_i + alphabet_num_convert[num + 1].to_i < 101 ? 
-          alphabet_num_convert[num].to_i + alphabet_num_convert[num + 1].to_i : 
+        alphabet_num_convert[num] = alphabet_num_convert[num].to_i + alphabet_num_convert[num + 1].to_i < 101 ?
+          alphabet_num_convert[num].to_i + alphabet_num_convert[num + 1].to_i :
           alphabet_num_convert[num].to_i + alphabet_num_convert[num + 1].to_i - 101
       }
       # 値が1つ減るので配列の末尾を削除
       alphabet_num_convert.pop(1)
     end
     # 配列が1つになっているので、格納されている値を呼び出し元に返却
-    return alphabet_num_convert[0]
+    alphabet_num_convert[0]
   end
 
   def run
@@ -57,6 +56,5 @@ class MissionB079
 
     # 結果を出力
     puts pattern1_score > pattern2_score ? pattern1_score : pattern2_score
-
   end
 end

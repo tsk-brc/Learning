@@ -3,7 +3,6 @@
 =end
 
 class MissionD166
-
   def run
     # 週数
     week = STDIN.gets.to_i

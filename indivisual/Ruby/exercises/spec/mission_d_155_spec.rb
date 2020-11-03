@@ -2,7 +2,6 @@ require './app/mission_d_155.rb'
 
 describe '入場料算出チェック' do
   describe '出力結果のテスト' do
-
     let(:missionD155) { MissionD155.new }
 
     it 'テスト1' do

@@ -3,7 +3,6 @@
 =end
 
 class MissionC083
-
   def run
     # 売上データの個数とグラフの表示単位
     data = STDIN.gets.split

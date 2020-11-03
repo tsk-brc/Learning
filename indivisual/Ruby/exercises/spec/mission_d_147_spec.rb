@@ -2,7 +2,6 @@ require './app/mission_d_147.rb'
 
 describe '体積チェック' do
   describe '出力結果のテスト' do
-
     let(:missionD147) { MissionD147.new }
 
     it 'テスト1' do

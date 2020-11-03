@@ -2,7 +2,6 @@ require './app/mission_d_164.rb'
 
 describe 'べき乗チェック' do
   describe '出力結果のテスト' do
-
     let(:missionD164) { MissionD164.new }
 
     it 'テスト1' do

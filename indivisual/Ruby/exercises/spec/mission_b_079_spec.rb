@@ -2,7 +2,6 @@ require './app/mission_b_079.rb'
 
 describe '相性占いチェック' do
   describe '出力結果のテスト' do
-
     let(:missionB079) { MissionB079.new }
 
     it 'テスト1' do

@@ -5,7 +5,6 @@
 =end
 
 class MissionC082
-
   def run
     # 受験人数と赤点になる人数(受験人数 赤点)
     scoreInfo = STDIN.gets.split

@@ -2,7 +2,6 @@ require './app/mission_d_157.rb'
 
 describe '組み合わせ数チェック' do
   describe '出力結果のテスト' do
-
     let(:missionD157) { MissionD157.new }
 
     it 'テスト1' do

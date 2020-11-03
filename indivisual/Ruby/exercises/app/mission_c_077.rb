@@ -4,8 +4,7 @@
   また、提出期限から遅れたレポートのうち、遅れた日数が9日以下のレポートは得点を8割とし、
   10日以上遅れたレポートの評価は0点とする。
 =end
-class MissionC077 
-
+class MissionC077
   def run
     # 学生の人数とレポートの問題数の情報
     information = STDIN.gets.split

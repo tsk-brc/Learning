@@ -2,7 +2,6 @@ require './app/mission_c_079.rb'
 
 describe 'カードコンプリートのチェック' do
   describe '出力結果のテスト' do
-
     let(:missionC079) { MissionC079.new }
 
     it 'テスト1' do

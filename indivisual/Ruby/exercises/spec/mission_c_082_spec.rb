@@ -2,7 +2,6 @@ require './app/mission_c_082.rb'
 
 describe '赤点数のチェック' do
   describe '出力結果のテスト' do
-
     let(:missionC082) { MissionC082.new }
 
     it 'テスト1' do

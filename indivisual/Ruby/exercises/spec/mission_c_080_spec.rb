@@ -2,7 +2,6 @@ require './app/mission_c_080.rb'
 
 describe 'ボタン押しゲームのチェック' do
   describe '出力結果のテスト' do
-
     let(:missionC080) { MissionC080.new }
 
     it 'テスト1' do

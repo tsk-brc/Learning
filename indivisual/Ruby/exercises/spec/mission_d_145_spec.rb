@@ -2,7 +2,6 @@ require './app/mission_d_145.rb'
 
 describe 'プレイ回数チェック' do
   describe '出力結果のテスト' do
-
     let(:missionD145) { MissionD145.new }
 
     it 'テスト1' do

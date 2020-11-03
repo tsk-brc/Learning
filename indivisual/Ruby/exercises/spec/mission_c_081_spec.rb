@@ -2,7 +2,6 @@ require './app/mission_c_081.rb'
 
 describe 'ペアチェック' do
   describe '出力結果のテスト' do
-
     let(:missionC081) { MissionC081.new }
 
     it 'テスト1' do

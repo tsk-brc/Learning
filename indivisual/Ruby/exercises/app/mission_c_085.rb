@@ -6,12 +6,11 @@
 =end
 
 class MissionC085
-
   def run
     # 各キーの耐久度
     durability = STDIN.gets.split.map(&:to_i)
     # アルファベットを格納する配列
-    alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+    alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
     # 入力したキー
     input_key = STDIN.gets.chomp!
     # 出力する文字列
@@ -40,7 +39,7 @@ class MissionC085
         end
       end
     end
-    # 文字列出力 
+    # 文字列出力
     puts str
   end
 end

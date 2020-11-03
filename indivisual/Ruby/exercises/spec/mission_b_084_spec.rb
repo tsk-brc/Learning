@@ -2,7 +2,6 @@ require './app/mission_b_084.rb'
 
 describe '行きたい店舗チェック' do
   describe '出力結果のテスト' do
-
     let(:missionB084) { MissionB084.new }
 
     it 'テスト1' do

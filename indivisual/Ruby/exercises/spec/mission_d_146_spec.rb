@@ -2,7 +2,6 @@ require './app/mission_d_146.rb'
 
 describe '省略形チェック' do
   describe '出力結果のテスト' do
-
     let(:missionD146) { MissionD146.new }
 
     it 'テスト1' do

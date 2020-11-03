@@ -4,7 +4,6 @@
   スコアは正しいボタンを押した回数*1000点でゲームオーバーになった場合には-1点とする。
 =end
 class MissionC080
-
   def run
     # ゲームのルール(ボタンの個数 ゲームオーバーになる不正解数)
     game_rule = STDIN.gets.split

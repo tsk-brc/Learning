@@ -2,7 +2,6 @@ require './app/mission_c_076.rb'
 
 describe '給料チェック' do
   describe '出力結果のテスト' do
-
     let(:missionC076) { MissionC076.new }
 
     it 'テスト1' do

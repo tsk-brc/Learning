@@ -2,7 +2,6 @@ require './app/mission_c_070.rb'
 
 describe '簡易ポーカー役チェック' do
   describe '出力結果のテスト' do
-
     let(:missionC070) { MissionC070.new }
 
     it 'テスト1' do

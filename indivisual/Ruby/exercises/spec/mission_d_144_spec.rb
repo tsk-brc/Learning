@@ -2,7 +2,6 @@ require './app/mission_d_144.rb'
 
 describe '2進数変換チェック' do
   describe '出力結果のテスト' do
-
     let(:missionD144) { MissionD144.new }
 
     it 'テスト1' do

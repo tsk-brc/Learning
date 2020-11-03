@@ -2,7 +2,6 @@
   株の売買での損益を計算する。
 =end
 class MissionC078
-
   def run
     # 取引する株の情報(日数 買値 売値)
     stockInfo = STDIN.gets.split
@@ -20,7 +19,7 @@ class MissionC078
         hasStocks += 1
       # 最終日または指定する売値以上の場合、全て売り、損益計算する
       elsif stock >= stockInfo[2].to_i || num == stockInfo[0].to_i - 1
-        money += (stock *hasStocks)
+        money += (stock * hasStocks)
         hasStocks = 0
       end
     end
