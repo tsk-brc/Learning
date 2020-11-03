@@ -1,6 +1,6 @@
 require './app/mission_d_141.rb'
 
-describe 'ペアチェック' do
+describe '文字列結合チェック' do
   describe '出力結果のテスト' do
     let(:missionD141) { MissionD141.new }
 
