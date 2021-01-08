@@ -6,9 +6,9 @@
 class MissionD147
   def run
     # 底面積
-    bottomArea = STDIN.gets.to_i
+    bottomArea = $stdin.gets.to_i
     # 四方の高さ
-    heightArray = STDIN.gets.split
+    heightArray = $stdin.gets.split
     # 四方の高さを格納する配列
     heightArraySort = []
     # 四方の高さをばらして配列に格納

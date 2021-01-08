@@ -5,14 +5,14 @@ describe '面積算出チェック' do
     let(:missionD156) { MissionD156.new }
 
     it 'テスト1' do
-      allow(STDIN).to receive(:gets).and_return "4\n", "15\n"
-      expect(STDOUT).to receive(:puts).with(60)
+      allow($stdin).to receive(:gets).and_return "4\n", "15\n"
+      expect($stdout).to receive(:puts).with(60)
       missionD156.run
     end
 
     it 'テスト2' do
-      allow(STDIN).to receive(:gets).and_return "3\n", "12\n"
-      expect(STDOUT).to receive(:puts).with(36)
+      allow($stdin).to receive(:gets).and_return "3\n", "12\n"
+      expect($stdout).to receive(:puts).with(36)
       missionD156.run
     end
   end

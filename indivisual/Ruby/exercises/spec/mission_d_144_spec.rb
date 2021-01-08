@@ -5,14 +5,14 @@ describe '2進数変換チェック' do
     let(:missionD144) { MissionD144.new }
 
     it 'テスト1' do
-      allow(STDIN).to receive(:gets) { "01011\n" }
-      expect(STDOUT).to receive(:puts).with(11)
+      allow($stdin).to receive(:gets) { "01011\n" }
+      expect($stdout).to receive(:puts).with(11)
       missionD144.run
     end
 
     it 'テスト2' do
-      allow(STDIN).to receive(:gets) { "11111\n" }
-      expect(STDOUT).to receive(:puts).with(31)
+      allow($stdin).to receive(:gets) { "11111\n" }
+      expect($stdout).to receive(:puts).with(31)
       missionD144.run
     end
   end

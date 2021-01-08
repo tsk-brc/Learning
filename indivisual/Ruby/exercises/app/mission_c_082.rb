@@ -7,14 +7,14 @@
 class MissionC082
   def run
     # 受験人数と赤点になる人数(受験人数 赤点)
-    scoreInfo = STDIN.gets.split
+    scoreInfo = $stdin.gets.split
     # 受験者の各教科の得点を格納する配列
     score = []
     # 受験者が赤点になった教科数を格納する配列
     failedScore = []
     # 受験人数分各教科の得点を配列に格納(国語 数学 英語)
     scoreInfo[0].to_i.times do |num1|
-      score[num1] = STDIN.gets.split
+      score[num1] = $stdin.gets.split
       # 比較前は赤点教科数が0なので0を格納しておく
       failedScore[num1] = 0
     end

@@ -6,9 +6,9 @@
 class MissionC080
   def run
     # ゲームのルール(ボタンの個数 ゲームオーバーになる不正解数)
-    game_rule = STDIN.gets.split
+    game_rule = $stdin.gets.split
     # ボタンを押した回数
-    push_button_count = STDIN.gets.to_i
+    push_button_count = $stdin.gets.to_i
     # 正解のボタン番号
     should_push_button_number = 1
     # 不正解数
@@ -16,7 +16,7 @@ class MissionC080
     # 合計得点
     score = 0
     # 押したボタン
-    push_button = STDIN.gets.split
+    push_button = $stdin.gets.split
     # ボタンを押した回数分ループ
     push_button_count.times do |num|
       # 押したボタンの正誤判定(正解なら+1000点、不正解なら不正解数を1プラスする)

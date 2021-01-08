@@ -8,15 +8,15 @@
 class MissionC076
   def run
     # 時給情報
-    salaryPerHour = STDIN.gets.split
+    salaryPerHour = $stdin.gets.split
     # 働いた日にち
-    workCount = STDIN.gets.to_i
+    workCount = $stdin.gets.to_i
     # 給料の合計
     salary = 0
     # 勤務日数分ループ
     workCount.times {
       # 始業時間と終業時間
-      work = STDIN.gets.split
+      work = $stdin.gets.split
       # 勤務した時間
       worktime = work[1].to_i - work[0].to_i
       # 時間数分ループ

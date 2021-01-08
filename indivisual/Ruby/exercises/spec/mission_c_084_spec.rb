@@ -5,18 +5,18 @@ describe '装飾文字列のチェック' do
     let(:missionC084) { MissionC084.new }
 
     it 'テスト1' do
-      allow(STDIN).to receive(:gets) { "Test\n" }
-      expect(STDOUT).to receive(:puts).with('++++++')
-      expect(STDOUT).to receive(:puts).with('+Test+')
-      expect(STDOUT).to receive(:puts).with('++++++')
+      allow($stdin).to receive(:gets) { "Test\n" }
+      expect($stdout).to receive(:puts).with('++++++')
+      expect($stdout).to receive(:puts).with('+Test+')
+      expect($stdout).to receive(:puts).with('++++++')
       missionC084.run
     end
 
     it 'テスト2' do
-      allow(STDIN).to receive(:gets) { "TicTacToe\n" }
-      expect(STDOUT).to receive(:puts).with('+++++++++++')
-      expect(STDOUT).to receive(:puts).with('+TicTacToe+')
-      expect(STDOUT).to receive(:puts).with('+++++++++++')
+      allow($stdin).to receive(:gets) { "TicTacToe\n" }
+      expect($stdout).to receive(:puts).with('+++++++++++')
+      expect($stdout).to receive(:puts).with('+TicTacToe+')
+      expect($stdout).to receive(:puts).with('+++++++++++')
       missionC084.run
     end
   end

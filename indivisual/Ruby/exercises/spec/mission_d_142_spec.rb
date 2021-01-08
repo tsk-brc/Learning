@@ -5,14 +5,14 @@ describe '電球必要数算出チェック' do
     let(:missionD142) { MissionD142.new }
 
     it 'テスト1' do
-      allow(STDIN).to receive(:gets) { "6 3 10\n" }
-      expect(STDOUT).to receive(:puts).with(20)
+      allow($stdin).to receive(:gets) { "6 3 10\n" }
+      expect($stdout).to receive(:puts).with(20)
       missionD142.run
     end
 
     it 'テスト2' do
-      allow(STDIN).to receive(:gets) { "7 2 3\n" }
-      expect(STDOUT).to receive(:puts).with(12)
+      allow($stdin).to receive(:gets) { "7 2 3\n" }
+      expect($stdout).to receive(:puts).with(12)
       missionD142.run
     end
   end

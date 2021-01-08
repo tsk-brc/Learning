@@ -5,14 +5,14 @@ describe 'パスワードセキュリティチェック' do
     let(:missionD165) { MissionD165.new }
 
     it 'テスト1' do
-      allow(STDIN).to receive(:gets) { "2020\n" }
-      expect(STDOUT).to receive(:puts).with('NG')
+      allow($stdin).to receive(:gets) { "2020\n" }
+      expect($stdout).to receive(:puts).with('NG')
       missionD165.run
     end
 
     it 'テスト2' do
-      allow(STDIN).to receive(:gets) { "1234\n" }
-      expect(STDOUT).to receive(:puts).with('OK')
+      allow($stdin).to receive(:gets) { "1234\n" }
+      expect($stdout).to receive(:puts).with('OK')
       missionD165.run
     end
   end

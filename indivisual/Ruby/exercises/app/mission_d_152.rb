@@ -5,9 +5,9 @@
 class MissionD152
   def run
     # 対象文字列
-    str = STDIN.gets
+    str = $stdin.gets
     # 判定する数
-    check = STDIN.gets.to_i
+    check = $stdin.gets.to_i
     # 指定数以上含まれているか
     puts str.count('R') >= check ? 'Yes' : 'No'
   end

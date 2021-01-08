@@ -5,7 +5,7 @@
 class MissionD162
   def run
     # 数量
-    amount = STDIN.gets.to_i
+    amount = $stdin.gets.to_i
     # 重量算出
     puts amount * 150
   end

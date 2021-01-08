@@ -4,7 +4,7 @@
 class MissionC079
   def run
     # カードを手に入れた枚数とカードの種類
-    cardInfo = STDIN.gets.split
+    cardInfo = $stdin.gets.split
     # 手にしたカードのリスト
     cardlist = []
     # コンプリートできなかったか(初期値はカードを1枚も持っていないのでtrue)
@@ -14,7 +14,7 @@ class MissionC079
       # 所持カード枚数を取得
       list = cardlist.size
       # カードをリストに格納
-      cardlist[list] = STDIN.gets.to_i
+      cardlist[list] = $stdin.gets.to_i
       # 重複を破棄
       cardlist.uniq!
       # カードをコンプリートしたか(重複削除した枚数がカードの種類と一致するか)

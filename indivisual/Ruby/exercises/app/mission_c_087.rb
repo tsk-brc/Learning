@@ -7,7 +7,7 @@
 class MissionC087
   def run
     # 回文数の初期値を取得
-    palindrome_num = STDIN.gets.to_i
+    palindrome_num = $stdin.gets.to_i
     # 回文数になったかを示すフラグ
     palindrome_unmatch_flg = true
     # 回文数になるまでループ

@@ -11,13 +11,13 @@
 class MissionB084
   def run
     # 各情報のリスト(店数 自分以外のユーザー数 好みの基準M)
-    info_list = STDIN.gets.split
+    info_list = $stdin.gets.split
     # 入力情報を各変数に分割
     shop = info_list[0].to_i
     user = info_list[1].to_i
     target = info_list[2].to_i
     # 自分の各店舗の評価
-    myself_info = STDIN.gets.split
+    myself_info = $stdin.gets.split
     # 行きたいお店の配列
     wanna_go_shop_list = []
     # その他のユーザ数分ループ
@@ -27,7 +27,7 @@ class MissionB084
       # あるユーザに対しての行きたいお店を格納する配列
       wanna_go_shop = []
       # あるユーザの各店舗の評価
-      target_info = STDIN.gets.split
+      target_info = $stdin.gets.split
       # 店舗数分ループ
       shop.times { |num2|
         # 評価がどちらも3ならば好みの数に加算

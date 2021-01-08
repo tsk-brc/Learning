@@ -5,7 +5,7 @@
 class MissionD146
   def run
     # 対象の言葉
-    str = STDIN.gets.chomp!
+    str = $stdin.gets.chomp!
     # 省略形
     abbreviation = ''
     # 母音を削除

@@ -5,16 +5,16 @@ describe '最大文字数チェック' do
     let(:missionD159) { MissionD159.new }
 
     it 'テスト1' do
-      allow(STDIN).to receive(:gets).and_return "engineer\n",
+      allow($stdin).to receive(:gets).and_return "engineer\n",
       "coding\n",
       "programming\n"
-      expect(STDOUT).to receive(:puts).with(11)
+      expect($stdout).to receive(:puts).with(11)
       missionD159.run
     end
 
     it 'テスト2' do
-      allow(STDIN).to receive(:gets).and_return "abc\n", "def\n", "ghi\n"
-      expect(STDOUT).to receive(:puts).with(3)
+      allow($stdin).to receive(:gets).and_return "abc\n", "def\n", "ghi\n"
+      expect($stdout).to receive(:puts).with(3)
       missionD159.run
     end
   end

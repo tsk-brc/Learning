@@ -6,7 +6,7 @@
 class MissionD165
   def run
     # パスワードの文字列を配列に格納
-    strArray = STDIN.gets.split('')
+    strArray = $stdin.gets.split('')
     # 比較しやすいようにソートしておく
     strSortArrat = strArray.sort
     # 同じ文字列があるか比較

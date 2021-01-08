@@ -5,7 +5,7 @@
 class MissionD153
   def run
     # 値を受け取る
-    nums = STDIN.gets
+    nums = $stdin.gets
     # 数値としてソート
     sort_nums = nums.split.sort { |a, b| a.to_i <=> b.to_i }
     # 2番目の値を出力

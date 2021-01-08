@@ -5,14 +5,14 @@ describe '日数変換チェック' do
     let(:missionD166) { MissionD166.new }
 
     it 'テスト1' do
-      allow(STDIN).to receive(:gets) { "6\n" }
-      expect(STDOUT).to receive(:puts).with(42)
+      allow($stdin).to receive(:gets) { "6\n" }
+      expect($stdout).to receive(:puts).with(42)
       missionD166.run
     end
 
     it 'テスト2' do
-      allow(STDIN).to receive(:gets) { "1\n" }
-      expect(STDOUT).to receive(:puts).with(7)
+      allow($stdin).to receive(:gets) { "1\n" }
+      expect($stdout).to receive(:puts).with(7)
       missionD166.run
     end
   end

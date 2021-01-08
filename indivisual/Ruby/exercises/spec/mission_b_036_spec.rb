@@ -5,7 +5,7 @@ describe '大統領選挙チェック' do
     let(:missionB036) { MissionB036.new }
 
     it 'テスト1' do
-      allow(STDIN).to receive(:gets).and_return "5\n",
+      allow($stdin).to receive(:gets).and_return "5\n",
         "Republican\n",
         "Democratic\n",
         "Republican\n",
@@ -19,12 +19,12 @@ describe '大統領選挙チェック' do
         "3 4 1 2 5\n",
         "4 2 1 3 5\n",
         "4 3 1 5 2\n"
-      expect(STDOUT).to receive(:puts).with(4)
+      expect($stdout).to receive(:puts).with(4)
       missionB036.run
     end
 
     it 'テスト2' do
-      allow(STDIN).to receive(:gets).and_return "10\n",
+      allow($stdin).to receive(:gets).and_return "10\n",
         "Republican\n",
         "Republican\n",
         "Democratic\n",
@@ -56,7 +56,7 @@ describe '大統領選挙チェック' do
         "6 8 7 3 4 10 5 9 1 2\n",
         "10 2 9 4 3 1 6 5 8 7\n",
         "8 7 9 1 4 6 2 10 5 3\n"
-      expect(STDOUT).to receive(:puts).with(4)
+      expect($stdout).to receive(:puts).with(4)
       missionB036.run
     end
   end

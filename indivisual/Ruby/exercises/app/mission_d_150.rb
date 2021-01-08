@@ -5,9 +5,9 @@
 class MissionD150
   def run
     # 登録者数
-    subscribers = STDIN.gets.to_i
+    subscribers = $stdin.gets.to_i
     # 目標数
-    target = STDIN.gets.to_i
+    target = $stdin.gets.to_i
     # 目標に到達しているか判定
     puts subscribers >= target ? 'Thank you' : target - subscribers
   end

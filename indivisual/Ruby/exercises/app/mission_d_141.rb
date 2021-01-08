@@ -5,13 +5,13 @@
 class MissionD141
   def run
     # データ数
-    data_number = STDIN.gets.to_i
+    data_number = $stdin.gets.to_i
     # 全データを格納する配列
     all_data = []
     # データ数分ループ
     data_number.times {
       # データ名を取得し、配列に追加
-      data_name = STDIN.gets.chomp
+      data_name = $stdin.gets.chomp
       all_data << data_name
     }
     # スペース区切りで出力

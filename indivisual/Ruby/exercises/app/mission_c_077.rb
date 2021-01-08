@@ -7,11 +7,11 @@
 class MissionC077
   def run
     # 学生の人数とレポートの問題数の情報
-    information = STDIN.gets.split
+    information = $stdin.gets.split
     # 学生分ループ
     information[0].to_i.times {
       # レポートの提出期限までの日とレポートの正解問題数
-      score = STDIN.gets.split
+      score = $stdin.gets.split
       # レポートの提出期限から9日以内過ぎての提出の場合は得点を8割にする
       if score[0].to_i >= 1 && score[0].to_i <= 9
         score[1] = 100 / information[1].to_f * score[1].to_i * 0.8

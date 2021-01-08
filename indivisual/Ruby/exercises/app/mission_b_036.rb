@@ -7,7 +7,7 @@
 class MissionB036
   def run
     # 候補者数
-    candidates = STDIN.gets.to_i
+    candidates = $stdin.gets.to_i
     # 共和党の候補者を格納する配列
     republican = []
     # 民主党の候補者を格納する配列
@@ -21,7 +21,7 @@ class MissionB036
     # 候補者数ループ
     candidates.times {
       # 候補者の党情報
-      party = STDIN.gets.chomp!
+      party = $stdin.gets.chomp!
       # 該当する党の獲得票数に0をセット(後続処理の判定で使用するので違う党には-1をセットしておく)
       if party == 'Republican'
         republican << 0
@@ -32,11 +32,11 @@ class MissionB036
       end
     }
     # 投票者数
-    voters = STDIN.gets.to_i
+    voters = $stdin.gets.to_i
     ######## 予備選挙開始 ########
     voters.times {
       # 投票番号(1位から順番にスペース区切りで記載)
-      voters_paper = STDIN.gets.split
+      voters_paper = $stdin.gets.split
       # 本選挙でも使用するので投票情報をコピーしておく
       voters_info << voters_paper
       # 共和党の候補者に投票したか

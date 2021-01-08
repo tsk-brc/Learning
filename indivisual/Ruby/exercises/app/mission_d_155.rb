@@ -5,9 +5,9 @@
 class MissionD155
   def run
     # 入場する人数
-    person = STDIN.gets.to_i
+    person = $stdin.gets.to_i
     # 指定されたリスト[団体料金が適用される人数の下限 団体料金 個人料金]
-    show_list = STDIN.gets
+    show_list = $stdin.gets
     # 空白区切りで配列に格納
     list = show_list.split
     # 団体料金が適用されるか

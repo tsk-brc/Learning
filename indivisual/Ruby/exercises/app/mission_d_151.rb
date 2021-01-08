@@ -5,9 +5,9 @@
 class MissionD151
   def run
     # もらったお菓子
-    item = STDIN.gets.chomp
+    item = $stdin.gets.chomp
     # もらったお菓子の価格
-    price = STDIN.gets.to_i
+    price = $stdin.gets.to_i
     # もらったお菓子によってお返しの額を算出する
     if item == 'chocolate'
       puts price * 2

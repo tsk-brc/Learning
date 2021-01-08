@@ -5,14 +5,14 @@ describe '数値大小チェック' do
     let(:missionD153) { MissionD153.new }
 
     it 'テスト1' do
-      allow(STDIN).to receive(:gets) { "100 200 300\n" }
-      expect(STDOUT).to receive(:puts).with(200)
+      allow($stdin).to receive(:gets) { "100 200 300\n" }
+      expect($stdout).to receive(:puts).with(200)
       missionD153.run
     end
 
     it 'テスト2' do
-      allow(STDIN).to receive(:gets) { "690 342 960\n" }
-      expect(STDOUT).to receive(:puts).with(690)
+      allow($stdin).to receive(:gets) { "690 342 960\n" }
+      expect($stdout).to receive(:puts).with(690)
       missionD153.run
     end
   end

@@ -50,7 +50,7 @@ class MissionB079
 
   def run
     # 2人の名前の配列
-    name = STDIN.gets.split
+    name = $stdin.gets.split
 
     # それぞれのパターンのスコアを算出
     pattern1_score = name_score(name[0], name[1])

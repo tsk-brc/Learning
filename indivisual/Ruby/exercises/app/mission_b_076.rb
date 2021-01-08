@@ -11,7 +11,7 @@
 class MissionB076
   def run
     # パン屋の情報(パンの種類数 パンの操作(焼き上がりor購入))
-    bakery_info = STDIN.gets.split
+    bakery_info = $stdin.gets.split
     # パンの価格を格納する配列
     bread_price = []
     # パンの残数を格納する配列
@@ -19,7 +19,7 @@ class MissionB076
     # パンの種類数分ループ
     bakery_info[0].to_i.times { |num|
       # パンの情報(パンの価格 パンの残数)
-      bread_info = STDIN.gets.split
+      bread_info = $stdin.gets.split
       # パンの価格と残数をそれぞれの配列に格納
       bread_price[num] = bread_info[0].to_i
       bread_number[num] = bread_info[1].to_i
@@ -31,7 +31,7 @@ class MissionB076
       # 購入金額
       purchased_amount = 0
       # パンの情報(パンの操作(焼き上がりor購入) それぞれのパンの個数)
-      purchase = STDIN.gets.split
+      purchase = $stdin.gets.split
       # パンが焼き上がったらそれぞれのパンの残数に加算
       if purchase[0] == 'bake'
         bakery_info[0].to_i.times { |num2|

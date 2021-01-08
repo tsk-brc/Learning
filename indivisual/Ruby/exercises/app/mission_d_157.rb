@@ -5,7 +5,7 @@
 class MissionD157
   def run
     # コインを投げる回数
-    num = STDIN.gets.to_i
+    num = $stdin.gets.to_i
     # 組み合わせを出力
     puts 2**num
   end

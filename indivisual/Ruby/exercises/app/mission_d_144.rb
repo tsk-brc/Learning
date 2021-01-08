@@ -4,6 +4,6 @@
 
 class MissionD144
   def run
-    puts STDIN.gets.to_i(2)
+    puts $stdin.gets.to_i(2)
   end
 end

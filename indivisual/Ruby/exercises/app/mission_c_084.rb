@@ -5,7 +5,7 @@
 class MissionC084
   def run
     # 対象の文字列
-    str = STDIN.gets.chomp
+    str = $stdin.gets.chomp
     # 文字数取得
     str_length = str.length
 

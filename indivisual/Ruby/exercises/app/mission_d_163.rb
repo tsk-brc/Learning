@@ -5,7 +5,7 @@
 class MissionD163
   def run
     # 入力文字
-    str = STDIN.gets.chomp
+    str = $stdin.gets.chomp
     # 入力文字の文字数
     strLength = str.length
     # 1文字ずつ縦に出力

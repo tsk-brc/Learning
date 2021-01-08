@@ -5,7 +5,7 @@
 class MissionD158
   def run
     # 湿度の値
-    humidity = STDIN.gets.to_i
+    humidity = $stdin.gets.to_i
     # 湿度チェック
     puts (humidity >= 40 && humidity <= 60) ? 'OK' : 'NG'
   end

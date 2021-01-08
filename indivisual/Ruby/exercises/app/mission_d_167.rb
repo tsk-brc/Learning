@@ -6,7 +6,7 @@
 class MissionD167
   def run
     # 購入金額
-    amount = STDIN.gets.to_i
+    amount = $stdin.gets.to_i
     # 1000円以上なら買い物袋を購入する
     puts amount >= 1000 ? amount + 3 : amount
   end

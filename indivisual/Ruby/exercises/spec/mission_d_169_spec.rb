@@ -5,14 +5,14 @@ describe '寒暖差チェック' do
     let(:missionD169) { MissionD169.new }
 
     it 'テスト1' do
-      allow(STDIN).to receive(:gets) { "25 18\n" }
-      expect(STDOUT).to receive(:puts).with(7)
+      allow($stdin).to receive(:gets) { "25 18\n" }
+      expect($stdout).to receive(:puts).with(7)
       missionD169.run
     end
 
     it 'テスト2' do
-      allow(STDIN).to receive(:gets) { "0 0\n" }
-      expect(STDOUT).to receive(:puts).with(0)
+      allow($stdin).to receive(:gets) { "0 0\n" }
+      expect($stdout).to receive(:puts).with(0)
       missionD169.run
     end
   end

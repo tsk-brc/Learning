@@ -5,7 +5,7 @@
 class MissionC083
   def run
     # 売上データの個数とグラフの表示単位
-    data = STDIN.gets.split
+    data = $stdin.gets.split
     # グラフ目盛りの最大値
     maxNum = 0
     # 売り上げを格納する配列
@@ -13,7 +13,7 @@ class MissionC083
     # データの個数分ループ
     data[0].to_i.times do |num|
       # 売り上げの配列に格納
-      money.push(STDIN.gets.to_i / data[1].to_i)
+      money.push($stdin.gets.to_i / data[1].to_i)
       # グラフ目盛りの最大値を更新
       maxNum = money[num] if maxNum < money[num]
     end

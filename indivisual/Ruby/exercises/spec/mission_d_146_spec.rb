@@ -5,14 +5,14 @@ describe '省略形チェック' do
     let(:missionD146) { MissionD146.new }
 
     it 'テスト1' do
-      allow(STDIN).to receive(:gets) { "tamago\n" }
-      expect(STDOUT).to receive(:puts).with('tmg')
+      allow($stdin).to receive(:gets) { "tamago\n" }
+      expect($stdout).to receive(:puts).with('tmg')
       missionD146.run
     end
 
     it 'テスト2' do
-      allow(STDIN).to receive(:gets) { "muhammad\n" }
-      expect(STDOUT).to receive(:puts).with('mhmmd')
+      allow($stdin).to receive(:gets) { "muhammad\n" }
+      expect($stdout).to receive(:puts).with('mhmmd')
       missionD146.run
     end
   end
