@@ -31,7 +31,7 @@ try{
         $update = $dbh->query("UPDATE quiz SET wrong_answer_number = $number[0] + 1 WHERE id = $key;");
       }
     }
-    $select = 'SELECT * FROM quiz ORDER BY RAND() LIMIT 1;';
+    $select = 'SELECT * FROM quiz WHERE status = 1 ORDER BY RAND() LIMIT 1;';
     foreach ($dbh->query($select) as $row) {
         
         echo <<<EOM
