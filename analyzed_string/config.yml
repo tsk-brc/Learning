@@ -1,0 +1,4 @@
+# 使用可能文字
+usable_chars: 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890'
+# 文字列の長さ
+string_langth: 6
