@@ -17,8 +17,7 @@ class MissionC088
       # 購入した商品とその個数
       buy_item = $stdin.gets.split.map!(&:to_i)
       # 購入時に所持金が足りる場合は、その商品を購入する
-      money -= items[buy_item[0] - 1] * buy_item[1] ¥
-      if money >= items[buy_item[0] - 1] * buy_item[1]
+      money -= items[buy_item[0] - 1] * buy_item[1] if money >= items[buy_item[0] - 1] * buy_item[1]
     }
     # 残金を出力
     puts money
