@@ -11,16 +11,16 @@ class MissionC077
     # 学生分ループ
     information[0].to_i.times {
       # レポートの提出期限までの日とレポートの正解問題数
-      score = $stdin.gets.split
+      score = $stdin.gets.split.map!(&:to_i)
       # レポートの提出期限から9日以内過ぎての提出の場合は得点を8割にする
-      if score[0].to_i >= 1 && score[0].to_i <= 9
-        score[1] = 100 / information[1].to_f * score[1].to_i * 0.8
+      if score[0] >= 1 && score[0] <= 9
+        score[1] = 100 / information[1].to_f * score[1] * 0.8
       # レポートの提出期限から10日以上過ぎての提出の場合は得点を0点にする
-      elsif score[0].to_i >= 10
+      elsif score[0] >= 10
         score[1] = 0
       # レポートの提出期限までの提出はそのままの得点とする
       else
-        score[1] = 100 / information[1].to_f * score[1].to_i
+        score[1] = 100 / information[1].to_f * score[1]
       end
       # 得点による評価を出力
       if score[1] >= 80

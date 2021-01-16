@@ -8,12 +8,12 @@ class MissionD147
     # 底面積
     bottomArea = $stdin.gets.to_i
     # 四方の高さ
-    heightArray = $stdin.gets.split
+    heightArray = $stdin.gets.split.map!(&:to_i)
     # 四方の高さを格納する配列
     heightArraySort = []
     # 四方の高さをばらして配列に格納
     4.times do |num|
-      heightArraySort[num] = heightArray[num].to_i
+      heightArraySort[num] = heightArray[num]
     end
     # 高さを昇順にソート
     heightArraySort.sort!

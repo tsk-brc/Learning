@@ -5,7 +5,7 @@
 class MissionD171
   def run
     # 自分と対戦相手のスコア
-    score = $stdin.gets.split.map!{|x| x.to_i}
+    score = $stdin.gets.split.map!(&:to_i)
     # 目標値
     num = $stdin.gets.to_i
     # 目標値との差を求める

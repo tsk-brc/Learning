@@ -7,13 +7,13 @@
 class MissionC082
   def run
     # 受験人数と赤点になる人数(受験人数 赤点)
-    scoreInfo = $stdin.gets.split
+    scoreInfo = $stdin.gets.split.map!(&:to_i)
     # 受験者の各教科の得点を格納する配列
     score = []
     # 受験者が赤点になった教科数を格納する配列
     failedScore = []
     # 受験人数分各教科の得点を配列に格納(国語 数学 英語)
-    scoreInfo[0].to_i.times do |num1|
+    scoreInfo[0].times do |num1|
       score[num1] = $stdin.gets.split
       # 比較前は赤点教科数が0なので0を格納しておく
       failedScore[num1] = 0
@@ -23,7 +23,7 @@ class MissionC082
       # 全受験者の対象教科の得点を格納する配列
       allStudentScore = []
       # 全受験者の対象教科の得点を配列に格納
-      scoreInfo[0].to_i.times do |num2|
+      scoreInfo[0].times do |num2|
         # 数値化して格納
         allStudentScore[num2] = score[num2][subject].to_i
       end
@@ -32,9 +32,9 @@ class MissionC082
       # 赤点の得点(最低点が0点なので初期値は-1とする)
       targetScore = -1
       # 赤点となる対象分だけループ
-      scoreInfo[1].to_i.times do |target|
+      scoreInfo[1].times do |target|
         # 各生徒の得点を比較
-        scoreInfo[0].to_i.times do |num3|
+        scoreInfo[0].times do |num3|
           # 赤点の得点だった場合に赤点の教科数を1加算する
           if allStudentScore[target] == score[num3][subject].to_i &&
             targetScore != allStudentScore[target]
@@ -46,7 +46,7 @@ class MissionC082
       end
     end
     # 各生徒の赤点の科目数を出力
-    scoreInfo[0].to_i.times do |num4|
+    scoreInfo[0].times do |num4|
       puts failedScore[num4]
     end
   end

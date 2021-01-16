@@ -7,10 +7,8 @@ class MissionD155
     # 入場する人数
     person = $stdin.gets.to_i
     # 指定されたリスト[団体料金が適用される人数の下限 団体料金 個人料金]
-    show_list = $stdin.gets
-    # 空白区切りで配列に格納
-    list = show_list.split
+    show_list = $stdin.gets.split.map!(&:to_i)
     # 団体料金が適用されるか
-    puts person >= list[0].to_i ? person * list[1].to_i : person * list[2].to_i
+    puts person >= show_list[0] ? person * show_list[1] : person * show_list[2]
   end
 end

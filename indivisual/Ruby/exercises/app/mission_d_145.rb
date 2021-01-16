@@ -6,8 +6,8 @@
 class MissionD145
   def run
     # パラメータ
-    param = $stdin.gets.split
+    param = $stdin.gets.split.map!(&:to_i)
     # プレイ回数算出
-    puts param[0].to_i / param[1].to_i
+    puts param[0] / param[1]
   end
 end

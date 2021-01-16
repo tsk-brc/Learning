@@ -12,9 +12,9 @@
 class MissionC070
   def run
     # ゲームの回数
-    count = $stdin.gets
+    count = $stdin.gets.to_i
     # ゲームの回数分ループ
-    count.to_i.times do |num|
+    count.times do |num|
       # 配られたカード
       data = $stdin.gets
       # 配られたカードの1枚目
