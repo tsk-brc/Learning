@@ -6,8 +6,8 @@ gem 'puma', '3.12.6'
 # Use SCSS for stylesheets
 gem 'sass-rails', '5.0.6'
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '3.0.4'
-gem 'pry-rails', '0.3.9'
+gem 'uglifier', '4.2.0'
+gem 'pry-rails', '0.3.4'
 # Use jquery as the JavaScript library
 gem 'jquery-rails', '4.4.0'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
