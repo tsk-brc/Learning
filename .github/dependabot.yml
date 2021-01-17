@@ -1,0 +1,22 @@
+version: 2
+updates:
+- package-ecosystem: bundler
+  directory: "/indivisual/Ruby/progate/rails5_study_3/tweet_app"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+- package-ecosystem: bundler
+  directory: "/indivisual/Ruby/progate/rails5_study_2/tweet_app"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+- package-ecosystem: bundler
+  directory: "/indivisual/Ruby/progate/rails5_study_1/tweet_app"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+- package-ecosystem: bundler
+  directory: "/indivisual/Ruby/exercises"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
