@@ -11,13 +11,13 @@
 class MissionB084
   def run
     # 各情報のリスト(店数 自分以外のユーザー数 好みの基準M)
-    info_list = $stdin.gets.split
+    info_list = $stdin.gets.split.map!(&:to_i)
     # 入力情報を各変数に分割
-    shop = info_list[0].to_i
-    user = info_list[1].to_i
-    target = info_list[2].to_i
+    shop = info_list[0]
+    user = info_list[1]
+    target = info_list[2]
     # 自分の各店舗の評価
-    myself_info = $stdin.gets.split
+    myself_info = $stdin.gets.split.map!(&:to_i)
     # 行きたいお店の配列
     wanna_go_shop_list = []
     # その他のユーザ数分ループ
@@ -27,15 +27,15 @@ class MissionB084
       # あるユーザに対しての行きたいお店を格納する配列
       wanna_go_shop = []
       # あるユーザの各店舗の評価
-      target_info = $stdin.gets.split
+      target_info = $stdin.gets.split.map!(&:to_i)
       # 店舗数分ループ
       shop.times { |num2|
         # 評価がどちらも3ならば好みの数に加算
-        count += 1 if myself_info[num2].to_i == target_info[num2].to_i &&
-        myself_info[num2].to_i == 3
+        count += 1 if myself_info[num2] == target_info[num2] &&
+        myself_info[num2] == 3
         # 自分が行ったことないかつユーザの評価が3の店舗番号を追加
-        wanna_go_shop << num2 + 1 if myself_info[num2].to_i == 0 &&
-        target_info[num2].to_i == 3
+        wanna_go_shop << num2 + 1 if myself_info[num2] == 0 &&
+        target_info[num2] == 3
       }
       # 好みの数が一定数以上なら行きたいお店の配列に追加([1,2,[3,4]]のような多次元配列になる場合あり)
       wanna_go_shop_list << wanna_go_shop if count >= target

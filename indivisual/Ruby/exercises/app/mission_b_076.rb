@@ -11,21 +11,21 @@
 class MissionB076
   def run
     # パン屋の情報(パンの種類数 パンの操作(焼き上がりor購入))
-    bakery_info = $stdin.gets.split
+    bakery_info = $stdin.gets.split.map!(&:to_i)
     # パンの価格を格納する配列
     bread_price = []
     # パンの残数を格納する配列
     bread_number = []
     # パンの種類数分ループ
-    bakery_info[0].to_i.times { |num|
+    bakery_info[0].times { |num|
       # パンの情報(パンの価格 パンの残数)
-      bread_info = $stdin.gets.split
+      bread_info = $stdin.gets.split.map!(&:to_i)
       # パンの価格と残数をそれぞれの配列に格納
-      bread_price[num] = bread_info[0].to_i
-      bread_number[num] = bread_info[1].to_i
+      bread_price[num] = bread_info[0]
+      bread_number[num] = bread_info[1]
     }
     # パンの操作数分ループ
-    bakery_info[1].to_i.times { |num|
+    bakery_info[1].times { |num|
       # 購入可能かどうかを表すフラグ
       available_purchase_flg = true
       # 購入金額
@@ -34,13 +34,13 @@ class MissionB076
       purchase = $stdin.gets.split
       # パンが焼き上がったらそれぞれのパンの残数に加算
       if purchase[0] == 'bake'
-        bakery_info[0].to_i.times { |num2|
+        bakery_info[0].times { |num2|
           bread_number[num2] += purchase[num2 + 1].to_i
         }
       else
         # パンの購入者が現れたらそれぞれのパンを購入可能かどうかチェック
         # 購入不可の場合にロールバックできないのでこの時点ではパンの残数を減算しない
-        bakery_info[0].to_i.times { |num2|
+        bakery_info[0].times { |num2|
           if bread_number[num2] - purchase[num2 + 1].to_i < 0
             available_purchase_flg = false
             break
@@ -48,7 +48,7 @@ class MissionB076
         }
         # 購入可能ならパンの残数を購入数で減算し、購入価格を算出
         if available_purchase_flg
-          bakery_info[0].to_i.times { |num2|
+          bakery_info[0].times { |num2|
             bread_number[num2] -= purchase[num2 + 1].to_i
             purchased_amount += bread_price[num2] * purchase[num2 + 1].to_i
           }

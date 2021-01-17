@@ -36,7 +36,7 @@ class MissionB036
     ######## 予備選挙開始 ########
     voters.times {
       # 投票番号(1位から順番にスペース区切りで記載)
-      voters_paper = $stdin.gets.split
+      voters_paper = $stdin.gets.split.map!(&:to_i)
       # 本選挙でも使用するので投票情報をコピーしておく
       voters_info << voters_paper
       # 共和党の候補者に投票したか
@@ -48,18 +48,18 @@ class MissionB036
       # 共和党と民主党の両方に投票するまでループ
       while republican_vote_flg || democratic_vote_flg do
         # 投票したのが共和党の候補者か
-        if republican[voters_paper[num].to_i - 1] >= 0
+        if republican[voters_paper[num] - 1] >= 0
           # 既に共和党候補者へ投票しているか
           if republican_vote_flg
             # 有効投票なら投票数を加算し、フラグをOFFに
-            republican[voters_paper[num].to_i - 1] += 1
+            republican[voters_paper[num] - 1] += 1
             republican_vote_flg = false
           end
         else
           # 既に民主党候補者へ投票しているか
           if democratic_vote_flg
             # 有効投票なら投票数を加算し、フラグをOFFに
-            democratic[voters_paper[num].to_i - 1] += 1
+            democratic[voters_paper[num] - 1] += 1
             democratic_vote_flg = false
           end
         end
@@ -92,10 +92,10 @@ class MissionB036
       # 候補者数分ループ
       candidates.times { |num2|
         # どちらかの党の代表者と一致したら獲得票数を加算してbreak
-        if voters_info[num][num2].to_i == democratic_represent
+        if voters_info[num][num2] == democratic_represent
           democratic_count += 1
           break
-        elsif voters_info[num][num2].to_i == republican_represent
+        elsif voters_info[num][num2] == republican_represent
           republican_count += 1
           break
         end

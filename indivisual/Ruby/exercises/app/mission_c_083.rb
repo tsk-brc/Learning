@@ -5,20 +5,20 @@
 class MissionC083
   def run
     # 売上データの個数とグラフの表示単位
-    data = $stdin.gets.split
+    data = $stdin.gets.split.map!(&:to_i)
     # グラフ目盛りの最大値
     maxNum = 0
     # 売り上げを格納する配列
     money = []
     # データの個数分ループ
-    data[0].to_i.times do |num|
+    data[0].times do |num|
       # 売り上げの配列に格納
-      money.push($stdin.gets.to_i / data[1].to_i)
+      money.push($stdin.gets.to_i / data[1])
       # グラフ目盛りの最大値を更新
       maxNum = money[num] if maxNum < money[num]
     end
     # データの個数分ループ
-    data[0].to_i.times do |num2|
+    data[0].times do |num2|
       # 仮データとして'.'で目盛りの最大まで文字列を作成
       str = '.' * maxNum
       # 実データ分'*'に置換
