@@ -1,10 +1,2 @@
-# クイズアプリの画像ファイル
-quiz/web/images/*.jpg
-
-# クイズアプリのdataファイル
-quiz/mysql/data/*
-!.gitkeep
-
-# その他もろもろ
 .bundle
 .vscode
