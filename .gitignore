@@ -15,9 +15,6 @@ quiz/web/images/*.jpg
 quiz/mysql/data/*
 !.gitkeep
 
-# TONGUESSのpycache
-tonguess/__pycache__
-
 # seleniumのログファイル
 geckodriver.log
 
