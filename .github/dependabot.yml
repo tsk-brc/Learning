@@ -81,6 +81,22 @@ updates:
     timezone: "Asia/Tokyo"
   open-pull-requests-limit: 10
 - package-ecosystem: bundler
+  directory: "/Ruby/progate/rails5_study_10/tweet_app"
+  target-branch: "develop"
+  schedule:
+    interval: daily
+    time: "12:00"
+    timezone: "Asia/Tokyo"
+  open-pull-requests-limit: 10
+- package-ecosystem: bundler
+  directory: "/Ruby/progate/rails5_study_11/tweet_app"
+  target-branch: "develop"
+  schedule:
+    interval: daily
+    time: "12:00"
+    timezone: "Asia/Tokyo"
+  open-pull-requests-limit: 10
+- package-ecosystem: bundler
   directory: "/Ruby/progate/rails5_dojo_1/tweet_app"
   target-branch: "develop"
   schedule:
