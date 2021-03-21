@@ -14,7 +14,7 @@ class MissionB089
       dial << $stdin.gets.chomp!
     }
     # 探す文字列の数だけループ
-    info[1].times{ |num1|
+    info[1].times { |num1|
       # 対象の文字列
       target = $stdin.gets.chomp!
       # 斜めに探索できる回数だけループ
