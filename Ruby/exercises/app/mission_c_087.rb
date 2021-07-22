@@ -21,14 +21,15 @@ class MissionC087
         # 1の位から桁の値を取得
         target = palindrome_num.to_s[palindrome_num.to_s.length - i - 1, 1]
         # 反転数に加算していく
-        invert_num += target.to_i * 10 ** (palindrome_num.to_s.length - i - 1)
+        invert_num += target.to_i * 10**(palindrome_num.to_s.length - i - 1)
       end
       # 回文数に反転数を加算
       palindrome_num += invert_num
       # 回文数の桁数分ループ
       palindrome_num.to_s.length.times do |j|
         # 回文数になっているかどうか
-        if palindrome_num.to_s[palindrome_num.to_s.length - j - 1, 1] != palindrome_num.to_s[j , 1]
+        if palindrome_num.to_s[palindrome_num.to_s.length - j - 1,
+1] != palindrome_num.to_s[j, 1]
           complete_palindrome_unmatch_flg = false
         end
       end

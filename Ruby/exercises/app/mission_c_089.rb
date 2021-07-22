@@ -12,16 +12,16 @@ class MissionC089
     # 合計得点
     score = 0
     # 各ボードに的中したかの結果を格納
-    board_size[0].times{
+    board_size[0].times {
       hit_score_board << $stdin.gets
     }
     # 各ボードのスコアを格納
-    board_size[0].times{
+    board_size[0].times {
       score_board << $stdin.gets.split.map!(&:to_i)
     }
     # 的中したボードのスコアを加算していく
-    board_size[0].times{ |num1|
-      board_size[1].times{ |num2|
+    board_size[0].times { |num1|
+      board_size[1].times { |num2|
         score += score_board[num1][num2] if  hit_score_board[num1][num2, 1] == 'o'
       }
     }
