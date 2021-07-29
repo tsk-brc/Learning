@@ -274,4 +274,4 @@ Performance/DeleteSuffix:
   Enabled: true
 
 LineLength:
-  Max: 80
+  Max: 100
