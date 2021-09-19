@@ -1,2 +1,20 @@
 .bundle
 .vscode
+
+# Ignore all logfiles and tempfiles.
+/Ruby/baseball/asagao/log/*
+!/Ruby/baseball/asagao/log/.keep
+/Ruby/baseball/asagao/tmp/*
+!/Ruby/baseball/asagao/tmp/.keep
+
+# Ignore uploaded files in development
+/Ruby/baseball/asagao/storage
+
+/Ruby/baseball/asagao/node_modules
+/Ruby/baseball/asagao/public/assets
+/Ruby/baseball/asagao/public/packs/js
+/Ruby/baseball/asagao/public/packs/manifest*
+
+# Ignore master key for decrypting credentials and more.
+/Ruby/baseball/asagao/config/credentials.yml.enc
+/Ruby/baseball/asagao/config/master.key
