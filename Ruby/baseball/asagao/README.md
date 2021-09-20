@@ -1,24 +1,9 @@
-# README
+[基礎Ruby on Rails](https://www.oiax.jp/rails5book)で学習した時に作成したプログラム
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* サーバー起動
 
-Things you may want to cover:
+mysql.server start
 
-* Ruby version
+* rails起動
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+bin/rails s
