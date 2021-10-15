@@ -1,6 +1,6 @@
 require './app/mission_d_193.rb'
 
-describe 'アニバーサリーチェック' do
+describe '電池交換チェック' do
   describe '出力結果のテスト' do
     let(:missionD193) { MissionD193.new }
 

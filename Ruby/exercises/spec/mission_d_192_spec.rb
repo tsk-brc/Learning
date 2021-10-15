@@ -1,6 +1,6 @@
 require './app/mission_d_192.rb'
 
-describe 'アニバーサリーチェック' do
+describe '感嘆符付加チェック' do
   describe '出力結果のテスト' do
     let(:missionD192) { MissionD192.new }
 
