@@ -5,7 +5,7 @@
 class MissionD193
   def run
     # 1回の交換で必要な電池数
-    need_batteries  = $stdin.gets.to_i
+    need_batteries = $stdin.gets.to_i
     # 購入した電池数
     bought_batteries = $stdin.gets.to_i
     # 交換可能な回数と余りの電池数を出力
