@@ -12,7 +12,7 @@ class MissionC095
     # 入力した文字列
     input_str = $stdin.gets
     # ルール通りかどうか
-    puts (master == input_str) || master.split('').sort.join != input_str.split('').sort.join ?
-      'NO' : 'YES'
+    puts (master == input_str || master.split('').sort.join != input_str.split('').sort.join ?
+      'NO' : 'YES')
   end
 end
