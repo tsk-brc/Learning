@@ -9,7 +9,7 @@ class MissionD196
     # 総計
     price = 0
     # 商品の総計を求める
-    item_num.times{
+    item_num.times {
       price += $stdin.gets.to_i
     }
     puts price
