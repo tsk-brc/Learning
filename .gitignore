@@ -1,5 +1,6 @@
 .bundle
 .vscode
+/Ruby/exercises/vendor/
 
 # Ignore all logfiles and tempfiles.
 /Ruby/baseball/asagao/log/*
