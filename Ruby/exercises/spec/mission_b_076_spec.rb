@@ -12,10 +12,7 @@ describe 'パン購入チェック' do
       "buy 1 2\n",
       "bake 0 1\n",
       "buy 0 2\n"
-      expect($stdout).to receive(:puts).with(550)
-      expect($stdout).to receive(:puts).with(-1)
-      expect($stdout).to receive(:puts).with(400)
-      missionB076.run
+      expect { missionB076.run }.to output("550\n-1\n400\n").to_stdout
     end
 
     it 'テスト2' do
@@ -29,12 +26,7 @@ describe 'パン購入チェック' do
       "buy 3 4 0\n",
       "buy 0 0 2\n",
       "buy 1 0 0\n"
-      expect($stdout).to receive(:puts).with(640)
-      expect($stdout).to receive(:puts).with(-1)
-      expect($stdout).to receive(:puts).with(1460)
-      expect($stdout).to receive(:puts).with(400)
-      expect($stdout).to receive(:puts).with(-1)
-      missionB076.run
+      expect { missionB076.run }.to output("640\n-1\n1460\n400\n-1\n").to_stdout
     end
   end
 end

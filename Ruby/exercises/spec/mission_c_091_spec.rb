@@ -9,10 +9,7 @@ describe '出荷チェック' do
       "24\n",
       "35\n",
       "3\n"
-      expect($stdout).to receive(:puts).with(20)
-      expect($stdout).to receive(:puts).with(40)
-      expect($stdout).to receive(:puts).with(10)
-      missionC091.run
+      expect { missionC091.run }.to output("20\n40\n10\n").to_stdout
     end
 
     it 'テスト2' do
@@ -20,19 +17,14 @@ describe '出荷チェック' do
       "40\n",
       "90\n",
       "10\n"
-      expect($stdout).to receive(:puts).with(50)
-      expect($stdout).to receive(:puts).with(100)
-      expect($stdout).to receive(:puts).with(50)
-      missionC091.run
+      expect { missionC091.run }.to output("50\n100\n50\n").to_stdout
     end
 
     it 'テスト3' do
       allow($stdin).to receive(:gets).and_return "3 2\n",
       "9\n",
       "5\n"
-      expect($stdout).to receive(:puts).with(9)
-      expect($stdout).to receive(:puts).with(6)
-      missionC091.run
+      expect { missionC091.run }.to output("9\n6\n").to_stdout
     end
   end
 end

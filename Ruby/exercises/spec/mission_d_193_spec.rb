@@ -6,16 +6,12 @@ describe '電池交換チェック' do
 
     it 'テスト1' do
       allow($stdin).to receive(:gets).and_return "3\n", "10\n"
-      expect($stdout).to receive(:puts).with(3)
-      expect($stdout).to receive(:puts).with(1)
-      missionD193.run
+      expect { missionD193.run }.to output("3\n1\n").to_stdout
     end
 
     it 'テスト2' do
       allow($stdin).to receive(:gets).and_return "1\n", "1\n"
-      expect($stdout).to receive(:puts).with(1)
-      expect($stdout).to receive(:puts).with(0)
-      missionD193.run
+      expect { missionD193.run }.to output("1\n0\n").to_stdout
     end
   end
 end

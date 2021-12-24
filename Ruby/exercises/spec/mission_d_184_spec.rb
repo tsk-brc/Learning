@@ -6,20 +6,12 @@ describe '時給計算チェック' do
 
     it 'テスト1' do
       allow($stdin).to receive(:gets).and_return "7\n", "program\n"
-      expect($stdout).to receive(:puts).with('p')
-      expect($stdout).to receive(:puts).with('r')
-      expect($stdout).to receive(:puts).with('o')
-      expect($stdout).to receive(:puts).with('g')
-      expect($stdout).to receive(:puts).with('r')
-      expect($stdout).to receive(:puts).with('a')
-      expect($stdout).to receive(:puts).with('m')
-      missionD184.run
+      expect { missionD184.run }.to output("p\nr\no\ng\nr\na\nm\n").to_stdout
     end
 
     it 'テスト2' do
       allow($stdin).to receive(:gets).and_return "1\n", "a\n"
-      expect($stdout).to receive(:puts).with('a')
-      missionD184.run
+      expect { missionD184.run }.to output("a\n").to_stdout
     end
   end
 end

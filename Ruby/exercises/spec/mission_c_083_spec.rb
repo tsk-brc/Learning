@@ -9,10 +9,7 @@ describe 'グラフ作成チェック' do
       "5\n",
       "15\n",
       "10\n"
-      expect($stdout).to receive(:puts).with('1:*..')
-      expect($stdout).to receive(:puts).with('2:***')
-      expect($stdout).to receive(:puts).with('3:**.')
-      missionC083.run
+      expect { missionC083.run }.to output("1:*..\n2:***\n3:**.\n").to_stdout
     end
 
     it 'テスト2' do
@@ -21,11 +18,8 @@ describe 'グラフ作成チェック' do
       "8\n",
       "16\n",
       "10\n"
-      expect($stdout).to receive(:puts).with('1:******..')
-      expect($stdout).to receive(:puts).with('2:****....')
-      expect($stdout).to receive(:puts).with('3:********')
-      expect($stdout).to receive(:puts).with('4:*****...')
-      missionC083.run
+      expect {
+ missionC083.run }.to output("1:******..\n2:****....\n3:********\n4:*****...\n").to_stdout
     end
   end
 end

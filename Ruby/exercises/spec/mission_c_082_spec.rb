@@ -10,11 +10,7 @@ describe '赤点数のチェック' do
       "50 50 40\n",
       "80 50 40\n",
       "40 80 80\n"
-      expect($stdout).to receive(:puts).with(1)
-      expect($stdout).to receive(:puts).with(3)
-      expect($stdout).to receive(:puts).with(2)
-      expect($stdout).to receive(:puts).with(1)
-      missionC082.run
+      expect { missionC082.run }.to output("1\n3\n2\n1\n").to_stdout
     end
 
     it 'テスト2' do
@@ -22,10 +18,7 @@ describe '赤点数のチェック' do
       "100 50 50\n",
       "100 50 50\n",
       "100 50 50\n"
-      expect($stdout).to receive(:puts).with(3)
-      expect($stdout).to receive(:puts).with(3)
-      expect($stdout).to receive(:puts).with(3)
-      missionC082.run
+      expect { missionC082.run }.to output("3\n3\n3\n").to_stdout
     end
   end
 end

@@ -14,9 +14,7 @@ describe '文字列探索チェック' do
       "EMCQFY\n",
       "BEEF\n",
       "PORK\n"
-      expect($stdout).to receive(:puts).with('2 3')
-      expect($stdout).to receive(:puts).with('2 1')
-      missionB089.run
+      expect { missionB089.run }.to output("2 3\n2 1\n").to_stdout
     end
 
     it 'テスト2' do
@@ -27,9 +25,7 @@ describe '文字列探索チェック' do
       "DFHB\n",
       "ABA\n",
       "BAB\n"
-      expect($stdout).to receive(:puts).with('1 1')
-      expect($stdout).to receive(:puts).with('2 2')
-      missionB089.run
+      expect { missionB089.run }.to output("1 1\n2 2\n").to_stdout
     end
   end
 end

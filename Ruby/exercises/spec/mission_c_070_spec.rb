@@ -14,22 +14,14 @@ describe '簡易ポーカー役チェック' do
       "1333\n",
       "1189\n",
       "3588\n"
-      expect($stdout).to receive(:puts).with('Four Card')
-      expect($stdout).to receive(:puts).with('Three Card')
-      expect($stdout).to receive(:puts).with('Two Pair')
-      expect($stdout).to receive(:puts).with('One Pair')
-      expect($stdout).to receive(:puts).with('No Pair')
-      expect($stdout).to receive(:puts).with('Three Card')
-      expect($stdout).to receive(:puts).with('One Pair')
-      expect($stdout).to receive(:puts).with('One Pair')
-      missionC070.run
+      expect {
+        missionC070.run }.to output("Four Card\nThree Card\nTwo Pair\nOne Pair\nNo Pair\n" \
+        "Three Card\nOne Pair\nOne Pair\n").to_stdout
     end
 
     it 'テスト2' do
       allow($stdin).to receive(:gets).and_return "2\n", "1234\n", "1234\n"
-      expect($stdout).to receive(:puts).with('No Pair')
-      expect($stdout).to receive(:puts).with('No Pair')
-      missionC070.run
+      expect { missionC070.run }.to output("No Pair\nNo Pair\n").to_stdout
     end
   end
 end

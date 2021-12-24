@@ -6,15 +6,12 @@ describe 'バス到着時刻チェック' do
 
     it 'テスト1' do
       allow($stdin).to receive(:gets).and_return "5 5\n", "2\n", "1\n", "7\n", "3\n", "10\n"
-      expect($stdout).to receive(:puts).with(3)
-      expect($stdout).to receive(:puts).with(7)
-      missionC095.run
+      expect { missionC095.run }.to output("3\n7\n").to_stdout
     end
 
     it 'テスト2' do
       allow($stdin).to receive(:gets).and_return "2 3\n", "3\n", "1\n"
-      expect($stdout).to receive(:puts).with(3)
-      missionC095.run
+      expect { missionC095.run }.to output("3\n").to_stdout
     end
   end
 end
