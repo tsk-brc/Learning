@@ -30,10 +30,10 @@ class MissionC102
       if days_live_groupA.include?(day) && !days_live_groupB.include?(day)
         puts 'A'
       # グループBのみ開催している場合はグループAに行く
-      elsif !days_live_groupA.include?(day + 1) && days_live_groupB.include?(day)
+      elsif !days_live_groupA.include?(day) && days_live_groupB.include?(day)
         puts 'B'
       # どちらも開催していない場合は行かない
-      elsif !days_live_groupA.include?(day + 1) && !days_live_groupB.include?(day)
+      elsif !days_live_groupA.include?(day) && !days_live_groupB.include?(day)
         puts 'x'
       # どちらも開催している場合は交互に行く
       else
