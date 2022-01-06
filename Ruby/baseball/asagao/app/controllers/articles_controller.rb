@@ -1,5 +1,4 @@
 class ArticlesController < ApplicationController
-
   # 記事一覧
   def index
     @articles = Article.visible.order(released_at: :desc)

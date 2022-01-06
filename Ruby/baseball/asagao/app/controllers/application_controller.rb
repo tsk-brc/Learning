@@ -1,10 +1,10 @@
 class ApplicationController < ActionController::Base
   helper_method :current_member
 
-  class LoginRequired < StandardError;
+  class LoginRequired < StandardError
   end
 
-  class Forbidden < StandardError;
+  class Forbidden < StandardError
   end
 
   if Rails.env.production? || ENV['RESCUE_EXCEPTIONS']
@@ -26,23 +26,23 @@ class ApplicationController < ActionController::Base
     raise LoginRequired unless current_member
   end
 
-  def rescue_bad_request(exception)
+  def rescue_bad_request(_exception)
     render 'errors/bad_request', status: 400, layout: 'error', formats: [:html]
   end
 
-  def rescue_login_required(exception)
+  def rescue_login_required(_exception)
     render 'errors/login_required', status: 403, layout: 'error', formats: [:html]
   end
 
-  def rescue_forbidden(exception)
+  def rescue_forbidden(_exception)
     render 'errors/forbidden', status: 403, layout: 'error', formats: [:html]
   end
 
-  def rescue_not_found(exception)
+  def rescue_not_found(_exception)
     render 'errors/not_found', status: 404, layout: 'error', formats: [:html]
   end
 
-  def rescue_internal_server_error(exception)
+  def rescue_internal_server_error(_exception)
     render 'errors/internal_server_error', status: 500, layout: 'error', formats: [:html]
   end
 end

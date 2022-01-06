@@ -1,6 +1,5 @@
 class EntriesController < ApplicationController
-
-  before_action :login_required, except: [:index, :show]
+  before_action :login_required, except: %i[index show]
 
   # 記事一覧
   def index

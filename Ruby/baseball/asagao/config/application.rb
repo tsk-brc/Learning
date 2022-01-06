@@ -40,8 +40,8 @@ module Asagao
 
     config.action_controller.permit_all_parameters = false
 
-    config.exceptions_app = ->(env) do
+    config.exceptions_app = lambda { |env|
       ErrorsController.action(:show).call(env)
-    end
+    }
   end
 end

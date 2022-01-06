@@ -42,7 +42,7 @@ class LessonController < ApplicationController
   end
 
   def step11
-    @population = 704414
+    @population = 704_414
     @surface = 141.31
   end
 
@@ -51,7 +51,7 @@ class LessonController < ApplicationController
   end
 
   def step13
-    @population = 127767944
+    @population = 127_767_944
   end
 
   def step14

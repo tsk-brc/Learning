@@ -10,16 +10,16 @@ Rails.application.routes.draw do
     get "lesson/step#{n}(/:name)" => "lesson#step#{n}"
   end
 
-  resources :members, only: [:index, :show] do
+  resources :members, only: %i[index show] do
     get 'search', on: :collection
     resources :entries, only: [:index]
   end
 
-  resource :session, only: [:create, :destroy]
-  resource :account, only: [:show, :edit, :update]
-  resource :password, only: [:show, :edit, :update]
+  resource :session, only: %i[create destroy]
+  resource :account, only: %i[show edit update]
+  resource :password, only: %i[show edit update]
 
-  resources :articles, only: [:index, :show]
+  resources :articles, only: %i[index show]
   resources :entries do
     patch 'like', 'unlike', on: :member
     get 'voted', on: :collection

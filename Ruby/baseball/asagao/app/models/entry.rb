@@ -4,11 +4,11 @@ class Entry < ApplicationRecord
   has_many :votes, dependent: :destroy
   has_many :voters, through: :votes, source: :member
 
-  STATUS_VALUE = %w(draft member_only public)
+  STATUS_VALUE = %w[draft member_only public].freeze
 
-  validates :title, presence: true, length: {  maximum: 200 }
+  validates :title, presence: true, length: { maximum: 200 }
   validates :body, :posted_at, presence: true
-  validates :status, inclusion: {in: STATUS_VALUE }
+  validates :status, inclusion: { in: STATUS_VALUE }
 
   scope :common, -> { where(status: 'public') }
   scope :published, -> { where('status <> ?', 'draft') }

@@ -5,13 +5,11 @@ class EntryImage < ApplicationRecord
 
   attribute :new_data
 
-  validates :new_data, presence: {on: :create}
+  validates :new_data, presence: { on: :create }
 
   validate if: :new_data do
     if new_data.respond_to?(:content_type)
-      unless new_data.content_type.in?(ALLOWED_CONTENT_TYPES)
-        errors.add(:new_data, :invalid_image_type)
-      end
+      errors.add(:new_data, :invalid_image_type) unless new_data.content_type.in?(ALLOWED_CONTENT_TYPES)
     else
       errors.add(:new_data, :invalid)
     end

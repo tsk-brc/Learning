@@ -1,6 +1,5 @@
 class MembersController < ApplicationController
-
-  #before_action :login_required
+  # before_action :login_required
   # 会員一覧
   def index
     @members = Member.order('number').page(params[:page]).per(15)

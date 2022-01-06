@@ -20,8 +20,8 @@ class Article < ApplicationRecord
   end
   scope :open_to_the_public, -> { where(member_only: false) }
 
-  scope :visible, -> do
+  scope :visible, lambda {
     now = Time.current
     where('released_at <= ?', now).where('expired_at > ? OR expired_at IS NULL', now)
-  end
+  }
 end

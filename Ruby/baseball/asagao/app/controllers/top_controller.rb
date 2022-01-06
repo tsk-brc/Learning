@@ -4,8 +4,7 @@ class TopController < ApplicationController
     @articles.open_to_the_public unless current_member
   end
 
-  def about
-  end
+  def about; end
 
   def bad_request
     raise ActionController::ParameterMissing, ''

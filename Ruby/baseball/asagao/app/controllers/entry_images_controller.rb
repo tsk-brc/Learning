@@ -30,7 +30,7 @@ class EntryImagesController < ApplicationController
     @image = @entry.images.build(image_params)
     if @image.save
       redirect_to [@entry, :images],
-      notice: '画像を作成しました。'
+                  notice: '画像を作成しました。'
     else
       render 'new'
     end
@@ -42,7 +42,7 @@ class EntryImagesController < ApplicationController
     @image.assign_attributes(image_params)
     if @image.save
       redirect_to [@entry, :images],
-      notice: '画像を更新しました。'
+                  notice: '画像を更新しました。'
     else
       render 'edit'
     end
@@ -53,7 +53,7 @@ class EntryImagesController < ApplicationController
     @image = @entry.images.find(params[:id])
     @image.destroy
     redirect_to [@entry, :images],
-      notice: '画像を削除しました。'
+                notice: '画像を削除しました。'
   end
 
   def move_higher
