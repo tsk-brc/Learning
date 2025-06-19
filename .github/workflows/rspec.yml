@@ -22,10 +22,10 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3 # https://github.com/actions/checkout/blob/master/action.yml
-      - name: Set up Ruby 2.6
+      - name: Set up Ruby 3.3
         uses: ruby/setup-ruby@v1 # https://github.com/ruby/setup-ruby/blob/master/action.yml
         with:
-          ruby-version: 2.6.10
+          ruby-version: '3.3'
 
       # Runs a set of commands using the runners shell
       - name: Test with Rspec
