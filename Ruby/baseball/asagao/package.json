@@ -2,12 +2,12 @@
   "name": "asagao",
   "private": true,
   "dependencies": {
-    "@rails/activestorage": "^7.0.2-2",
+    "@rails/activestorage": "^8.0.200",
     "@rails/ujs": "^7.0.2-2",
-    "@rails/webpacker": "5.4.3",
+    "@rails/webpacker": "5.4.4",
     "turbolinks": "^5.2.0",
     "webpack": "^5.99.9",
-    "webpack-cli": "^5.0.0"
+    "webpack-cli": "^6.0.1"
   },
   "version": "0.1.0",
   "devDependencies": {
