@@ -5,6 +5,7 @@
     "@rails/activestorage": "^8.0.200",
     "@rails/ujs": "^7.0.2-2",
     "@rails/webpacker": "5.4.4",
+    "postcss": "^8.4.31",
     "turbolinks": "^5.2.0",
     "webpack": "^5.99.9",
     "webpack-cli": "^6.0.1"
